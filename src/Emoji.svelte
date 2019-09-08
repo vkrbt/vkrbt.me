@@ -7,25 +7,37 @@
 
 	let randomSpeed = getRandom(.1, 0.5);
 
-	export let currentX = x;
-	export let currentY = y;
+	export let currentX = 0;
+	export let currentY = 0;
 
 	let xDirection = getRandomBool();
 	let yDirection = getRandomBool();
 
+	export function handleDeviceOrientation(event) {
+		requestAnimationFrame(() => {
+			let maxX = window.innerWidth;
+            let maxY = window.innerHeight;
+
+			let x = event.gamma;
+			let y = event.beta;
+
+			if (x >  90) { x =  90};
+            if (x < -90) { x = -90};
+
+            x += 90;
+            y += 90;
+
+			console.log(x, y);
+
+            currentX  = (maxX*x/maxX - 120);
+            currentY = (maxY*y/maxY - 120);
+		});
+	}
+
 	export function handleMouseMove(event) {
 		requestAnimationFrame(() => {
-			if (xDirection) {
-				currentX += event.movementX * randomSpeed;
-			} else {
-				currentX -= event.movementX * randomSpeed;
-			}
-
-			if (yDirection) {
-				currentY += event.movementY * randomSpeed;
-			} else {
-				currentY -= event.movementY * randomSpeed;
-			}
+			currentX -= event.movementX * randomSpeed;
+			currentY -= event.movementY * randomSpeed;
 		});
 	}
 </script>
@@ -35,11 +47,15 @@
 		display: block;
 		position: absolute;
 		font-size: 32px;
-		transform: translate(-50%, -50%);
 		opacity: 0.5;
 	}
 </style>
 
-<svelte:window on:mousemove={handleMouseMove} />
+<svelte:window on:mousemove={handleMouseMove} on:deviceorientation={handleDeviceOrientation} />
 
-<span style="top: {currentX}px; left: {currentY}px" class="float-emoji">{@html emoji}</span>
+<span
+	style="top: {y}px; left: {x}px; transform: translate3d({currentX}px, {currentY}px, 0)"
+	class="float-emoji"
+>
+	{@html emoji}
+</span>
