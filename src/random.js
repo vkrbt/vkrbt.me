@@ -1,9 +1,11 @@
-export function getRandom(from, to) {
-    return Math.random() * (to - from + 1) + from;
+export function getRandom(min, max) {
+    return Math.random() * (max - min) + min;
 }
 
-export function getRandomInt(from, to) {
-    return Math.floor(getRandom(from, to));
+export function getRandomInt(min, max) {
+    min = Math.ceil(min);
+    max = Math.floor(max);
+    return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 export function getRandomBool() {

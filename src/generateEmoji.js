@@ -20,8 +20,8 @@ export function generateEmoji(number, radius) {
 			}
 
 			newEmoji = {
-				y: getRandomInt(-innerWidth / 2, innerWidth * 1.5),
-				x: getRandomInt(-innerHeight / 2, innerHeight * 1.5),
+				x: getRandomInt(0, innerWidth),
+				y: getRandomInt(0, innerHeight),
 				emoji: `&#${getRandomInt(FIRST_EMOJI_FACE, LAST_EMOJI_FACE)}`,
 			};
 

@@ -5,7 +5,7 @@
 	export let y;
 	export let emoji;
 
-	let randomSpeed = getRandom(.1, 0.5);
+	let randomSpeed = getRandom(0.05, .15);
 
 	export let currentX = 0;
 	export let currentY = 0;
@@ -27,9 +27,7 @@
             x += 90;
             y += 90;
 
-			console.log(x, y);
-
-            currentX  = (maxX*x/maxX - 120);
+			currentX  = (maxX*x/maxX - 120);
             currentY = (maxY*y/maxY - 120);
 		});
 	}
