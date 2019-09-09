@@ -6,7 +6,9 @@
 
 	let {innerHeight, innerWidth} = window;
 
-	let randomEmojis = generateEmoji(number, 50);
+	let radius = Math.sqrt(innerHeight * innerWidth) / 10;
+
+	let randomEmojis = generateEmoji(number, radius);
 </script>
 
 <style>

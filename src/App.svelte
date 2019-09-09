@@ -29,4 +29,4 @@
 	</p>
 	<p>You can contact me via <a href="https://t.me/vkrbt/">telegram</a> or <a href="mailto:vkrbt.me">email</a></p>
 </main>
-<Emojis number={80}></Emojis>
+<Emojis number={50}></Emojis>
