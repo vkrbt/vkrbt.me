@@ -7,5 +7,5 @@ export function isTouchSupported() {
 }
 
 export function isDeviceOrientationSupported() {
-    return Boolean(DeviceOrientationEvent);
+    return Boolean(window.DeviceOrientationEvent);
 }

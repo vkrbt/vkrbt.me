@@ -15,6 +15,10 @@
 	export let currentYMovement = 0;
 	export let isOrientation = isDeviceOrientationSupported() && isTouchSupported();
 
+	if (window.DeviceOrientationEvent && window.DeviceOrientationEvent.requestPermissions) {
+		DeviceOrientationEvent.requestPermissions();
+	}
+
 	export function handleDeviceOrientation(event) {
 		requestAnimationFrame(() => {
 			let maxX = window.innerWidth;
