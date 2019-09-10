@@ -1,6 +1,7 @@
 <script>
 	import Emoji from './Emoji.svelte';
 	import {generateEmoji} from './generateEmoji';
+	import {throttle} from './throttle';
 	import {isDeviceOrientationSupported, isTouchSupported} from './device';
 
 	export let number;
@@ -44,6 +45,12 @@
 			currentYMovement += event.movementY;
 		});
 	}
+
+	export let updateEmoji = throttle((event) => {
+		randomEmojis = generateEmoji(number, radius);
+		currentXMovement = 0;
+		currentYMovement = 0;
+	}, 150);
 </script>
 
 <style>
@@ -59,6 +66,7 @@
 </style>
 
 <svelte:window
+	on:resize|passive={updateEmoji}
 	on:mousemove|passive={isOrientation ? null : handleMouseMove}
 	on:deviceorientation|passive={isOrientation ? handleDeviceOrientation : null}
 />
