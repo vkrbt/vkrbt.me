@@ -3,7 +3,7 @@
 	"theme_color": "#dfc25a",
 	"name": "Vlad Korbut | Frontend Developer",
 	"short_name": "Vlad Korbut",
-	"display": "minimal-ui",
+	"display": "standalone",
 	"start_url": "/",
 	"icons": [
 		{
