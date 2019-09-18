@@ -1,9 +1,5 @@
 <script>
 	import Emojis from './Emojis.svelte';
-	import photo from './images/vkrbt.jpg';
-	import photox2 from './images/vkrbt@2x.jpg';
-
-	export let image = photo;
 
 	let birthday = Date.UTC(1998, 5, 8);
 	let today = Date.now();
@@ -42,7 +38,7 @@
 </style>
 
 <main class="content">
-	<img class="picture" src={image} srcset="{photox2} 2x" alt="my portrait" />
+	<img class="picture" src='vkrbt.jpg' srcset="vkrbt@2x.jpg 2x" alt="my portrait" />
 	<div class="description">
 		<h1>Vladislav Korbut</h1>
 		<h2>Frontend developer</h2>
@@ -54,4 +50,6 @@
 		</p>
 	</div>
 </main>
-<Emojis number={50}></Emojis>
+{#if process.browser}
+	<Emojis number={50}></Emojis>
+{/if}
