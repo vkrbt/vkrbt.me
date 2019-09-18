@@ -1,5 +1,5 @@
 <script>
-	import {getRandom, getRandomBool} from './random';
+	import {getRandom, getRandomBool} from '../helpers/random';
 
 	export let x;
 	export let y;
