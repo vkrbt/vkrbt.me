@@ -1,4 +1,4 @@
-html, body {
+html, body, #sapper {
 	position: relative;
 	width: 100%;
 	height: 100%;

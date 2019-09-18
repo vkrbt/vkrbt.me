@@ -1,8 +1,8 @@
 <script>
 	import Emoji from './Emoji.svelte';
-	import {generateEmoji} from './generateEmoji';
-	import {throttle} from './throttle';
-	import {isDeviceOrientationSupported, isTouchSupported} from './device';
+	import {generateEmoji} from '../helpers/generateEmoji';
+	import {throttle} from '../helpers/throttle';
+	import {isDeviceOrientationSupported, isTouchSupported} from '../helpers/device';
 
 	export let number;
 
