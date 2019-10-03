@@ -18,6 +18,7 @@
 		z-index: 2;
 		overflow: hidden;
 		transition: 0.1s ease-in-out;
+		border-radius: 2px;
 	}
 
 	.button-link:hover {

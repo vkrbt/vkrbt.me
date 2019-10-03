@@ -32,6 +32,7 @@
 	}
 
 	.description {
+		text-align: center;
 		padding-left: 16px;
 		background: rgba(255, 255, 255, 0.7);
 	}
@@ -44,8 +45,8 @@
 
 <ButtonLink href="/notes">Мои заметки</ButtonLink>
 <main class="content">
-	<img class="picture" src='vkrbt.jpg' srcset="vkrbt@2x.jpg 2x" alt="мой портрет" />
 	<div class="description">
+		<img class="picture" src='vkrbt.jpg' srcset="vkrbt@2x.jpg 2x" alt="мой портрет" />
 		<h1>Я Влад Корбут</h1>
 		<h2>Разработчик интерфейсов</h2>
 		<p>

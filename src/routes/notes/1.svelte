@@ -12,6 +12,10 @@
         max-width: 600px;
         margin: auto;
     }
+
+    p {
+        padding-bottom: 16px;
+    }
 </style>
 
 <Container showHome>
