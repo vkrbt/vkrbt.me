@@ -1,5 +1,6 @@
 <script>
 	import Emojis from './Emojis.svelte';
+	import ButtonLink from './ButtonLink.svelte';
 
 	let birthday = Date.UTC(1998, 5, 8);
 	let today = Date.now();
@@ -11,13 +12,16 @@
 <style>
 	.content {
 		z-index: 1;
-		display: inline-block;
-		padding: 16px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		height: 100%;
-		font-family: 'Arvo';
+		position: fixed;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
 	}
 
 	@media screen and (max-width: 576px) {
@@ -37,16 +41,17 @@
 	}
 </style>
 
+<ButtonLink href="/notes">Мои заметки</ButtonLink>
 <main class="content">
-	<img class="picture" src='vkrbt.jpg' srcset="vkrbt@2x.jpg 2x" alt="my portrait" />
+	<img class="picture" src='vkrbt.jpg' srcset="vkrbt@2x.jpg 2x" alt="мой портрет" />
 	<div class="description">
-		<h1>Vladislav Korbut</h1>
-		<h2>Frontend developer</h2>
+		<h1>Я Влад Корбут</h1>
+		<h2>Разработчик интерфейсов</h2>
 		<p>
-			My name is <strong>Vlad Korbut</strong>. I'm {ageInYears} years old. I live in Minsk, Belarus.
+			Мне {ageInYears}, а живу я Минске.
 		</p>
 		<p>
-			You can contact me via <a href="https://t.me/vkrbt/">telegram</a> or <a href="mailto:vkrbt.me">email</a>
+			Для связи со мной можно использовать <a href="https://t.me/vkrbt/">телеграм</a> или <a href="mailto:vkrbt.me">email</a>
 		</p>
 	</div>
 </main>
