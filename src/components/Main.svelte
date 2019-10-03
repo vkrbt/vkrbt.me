@@ -13,6 +13,7 @@
 	.content {
 		z-index: 1;
 		display: flex;
+		padding: 16px;
 		justify-content: center;
 		align-items: center;
 		height: 100%;
