@@ -16,10 +16,6 @@
         margin: 0;
         padding-bottom: 16px;
     }
-
-    .note-item__text {
-        padding: 0;
-    }
 </style>
 
 <Container showHome>
