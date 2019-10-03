@@ -373,13 +373,26 @@ body {
   font-family: "Rubik", Helvetica, sans-serif;
 }
 
+h1 {
+  line-height: 40px;
+  font-size: 32px;
+  margin: 16px 0;
+}
+
+h2 {
+  line-height: 32px;
+  font-size: 24px;
+  margin: 16px 0;
+}
+
 p {
   margin: 0;
   padding: 8px 0;
+  line-height: 24px;
 }
 
 a {
-  color: rgb(0, 100, 200);
+  color: #0064c8;
   text-decoration: none;
 }
 
@@ -388,7 +401,7 @@ a:hover {
 }
 
 a:visited {
-  color: rgb(0, 80, 160);
+  color: #0064c8;
 }
 
 hr {

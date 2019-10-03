@@ -11,7 +11,7 @@
     }
 
     .container_home {
-        padding-bottom: 52px;
+        padding-bottom: 56px;
     }
 </style>
 
