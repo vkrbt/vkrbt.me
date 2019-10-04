@@ -1,7 +1,10 @@
 <script>
 	import ButtonLink from './ButtonLink.svelte';
 
-    export let showHome;
+    export let href;
+    export let label;
+
+    let isButtonShown = href && label;
 </script>
 
 <style>
@@ -15,12 +18,12 @@
     }
 </style>
 
-<div class="container{showHome ? ' container_home' : ''}">
+<div class="container{isButtonShown ? ' container_home' : ''}">
     <slot />
 
-    {#if showHome}
-        <ButtonLink href="/">
-            На главную
+    {#if isButtonShown}
+        <ButtonLink {href}>
+            {label}
         </ButtonLink>
     {/if}
 </div>

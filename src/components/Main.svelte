@@ -1,6 +1,5 @@
 <script>
 	import Emojis from './Emojis.svelte';
-	import ButtonLink from './ButtonLink.svelte';
 
 	let birthday = Date.UTC(1998, 5, 8);
 	let today = Date.now();
@@ -11,7 +10,6 @@
 
 <style>
 	.content {
-		z-index: 1;
 		display: flex;
 		padding: 16px;
 		justify-content: center;
@@ -25,16 +23,18 @@
 		z-index: 1;
 	}
 
+	.description {
+		padding-left: 16px;
+		background: rgba(255, 255, 255, 0.7);
+	}
+
 	@media screen and (max-width: 576px) {
+		.description {
+			text-align: center;
+		}
 		.content {
 			flex-direction: column;
 		}
-	}
-
-	.description {
-		text-align: center;
-		padding-left: 16px;
-		background: rgba(255, 255, 255, 0.7);
 	}
 
 	.picture {
@@ -43,10 +43,9 @@
 	}
 </style>
 
-<ButtonLink href="/notes">Мои заметки</ButtonLink>
 <main class="content">
+	<img class="picture" src='vkrbt.jpg' srcset="vkrbt@2x.jpg 2x" alt="мой портрет" />
 	<div class="description">
-		<img class="picture" src='vkrbt.jpg' srcset="vkrbt@2x.jpg 2x" alt="мой портрет" />
 		<h1>Я Влад Корбут</h1>
 		<h2>Разработчик интерфейсов</h2>
 		<p>

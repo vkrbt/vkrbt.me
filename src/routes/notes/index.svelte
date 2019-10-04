@@ -18,7 +18,7 @@
     }
 </style>
 
-<Container showHome>
+<Container href="/" label="На главную">
     <section class="notes">
         <h1>Мои заметки</h1>
         <ul class="notes-list">

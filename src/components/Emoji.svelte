@@ -8,7 +8,7 @@
 	export let movementY;
 	export let isOrientation;
 
-	let randomSpeed = isOrientation ? getRandom(0.8, 1.2) : getRandom(0.05, .15);
+	let randomSpeed = isOrientation ? getRandom(0.8, 1.2) : getRandom(0.01, .05);
 
 	export let currentX;
 	export let currentY;
