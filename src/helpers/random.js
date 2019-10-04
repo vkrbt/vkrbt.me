@@ -11,3 +11,7 @@ export function getRandomInt(min, max) {
 export function getRandomBool() {
     return getRandom(0, 1) < 0.5;
 }
+
+export function getRandomItem(list) {
+    return list[getRandomInt(0, list.length - 1)];
+}
