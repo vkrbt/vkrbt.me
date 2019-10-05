@@ -22,12 +22,12 @@
     <section class="notes">
         <h1>Мои заметки</h1>
         <ul class="notes-list">
-            <li class="note-item">
+            <!-- <li class="note-item">
                 <a href="/notes/2">
                     <h2 class="note-item__head">Щелочной лимон</h2>
                     <p class="note-item__text">Что за кислый фрукт</p>
                 </a>
-            </li>
+            </li> -->
             <li class="note-item">
                 <a href="/notes/1">
                     <h2 class="note-item__head">Приложение-привычка</h2>
