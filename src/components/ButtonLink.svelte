@@ -1,4 +1,12 @@
 <script>
+	import {stores} from '@sapper/app';
+	import UAParser from 'ua-parser-js';
+
+	let {session} = stores();
+	let parser = new UAParser($session['user-agent']);
+
+	let isMobile = parser.getResult().device.type === 'mobile';
+
 	export let href;
 </script>
 
@@ -7,6 +15,7 @@
 		position: fixed;
 		top: 16px;
 		right: 16px;
+		right: calc(16px + env(safe-area-inset-right));
 		padding: 8px 24px;
 		font-size: 20px;
 		line-height: 40px;
@@ -23,6 +32,9 @@
 
 	.button-link:hover {
 		text-decoration: none;
+	}
+
+	.button-link:not(.button-link_no-animation):hover {
 		opacity: 1;
 		color: white;;
 	}
@@ -53,8 +65,8 @@
 		transform: translateX(100%);
 	}
 
-	.button-link:hover:after,
-	.button-link:hover:before {
+	.button-link:not(.button-link_no-animation):hover:after,
+	.button-link:not(.button-link_no-animation):hover:before {
 		transform: translateX(0);
 	}
 
@@ -62,6 +74,7 @@
 		.button-link {
 			top: auto;
 			bottom: 0;
+			bottom: env(safe-area-inset-bottom);
 			right: 0;
 			left: 0;
 			opacity: 1;
@@ -69,6 +82,6 @@
 	}
 </style>
 
-<a class="button-link" href={href}>
+<a class="button-link {isMobile ? 'button-link_no-animation' : ''}" href={href}>
 	<slot />
 </a>
