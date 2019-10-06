@@ -1,0 +1,23 @@
+.note {
+    max-width: 600px;
+    margin: auto;
+
+    :global(p) {
+        font-size: 18px;
+        line-height: 24px;
+    }
+
+    :global(.note) {
+        max-width: 600px;
+        margin: auto;
+        hyphens: auto;
+    }
+
+    :global(p) {
+        padding-bottom: 16px;
+    }
+
+    :global(hr) {
+        margin: 0 0 16px;
+    }
+}

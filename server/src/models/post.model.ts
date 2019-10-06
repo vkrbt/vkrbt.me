@@ -38,6 +38,12 @@ export class Post extends Entity {
   })
   created: number;
 
+  @property({
+    type: 'boolean',
+    default: true,
+  })
+  is_visible: boolean;
+
   constructor(data?: Partial<Post>) {
     super(data);
   }

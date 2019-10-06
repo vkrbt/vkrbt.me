@@ -1,11 +1,10 @@
 <script>
     import {stores} from '@sapper/app';
-    import UAParser from 'ua-parser-js';
 
-    const {session} = stores();
-    const parser = new UAParser($session['user-agent']);
+    let {session} = stores();
+    let ua = $session.ua;
 
-    const isMobile = parser.getResult().device.type === 'mobile';
+    let isMobile = ua.device.type === 'mobile';
 
     export let href;
 </script>

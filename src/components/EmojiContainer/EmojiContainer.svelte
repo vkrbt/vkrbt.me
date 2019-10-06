@@ -12,9 +12,9 @@
 
     let randomEmojis = generateEmoji(number, radius);
 
-    export let currentXMovement = 0;
-    export let currentYMovement = 0;
-    export let isOrientation = isDeviceOrientationSupported() && isTouchSupported();
+    let currentXMovement = 0;
+    let currentYMovement = 0;
+    let isOrientation = isDeviceOrientationSupported() && isTouchSupported();
 
     if (window.DeviceOrientationEvent && window.DeviceOrientationEvent.requestPermissions) {
         DeviceOrientationEvent.requestPermissions();
@@ -43,14 +43,14 @@
         });
     }
 
-    export function handleMouseMove(event) {
+    function handleMouseMove(event) {
         requestAnimationFrame(() => {
             currentXMovement += event.movementX;
             currentYMovement += event.movementY;
         });
     }
 
-    export let updateEmoji = throttle(() => {
+    let updateEmoji = throttle(() => {
         randomEmojis = generateEmoji(number, radius);
         currentXMovement = 0;
         currentYMovement = 0;
