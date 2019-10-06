@@ -1,6 +1,7 @@
 import sirv from 'sirv';
 import polka from 'polka';
 import compression from 'compression';
+import UAParser from 'ua-parser-js';
 import * as sapper from '@sapper/server';
 
 const {PORT, NODE_ENV} = process.env;
@@ -12,7 +13,7 @@ polka() // You can also use Express
         sirv('static', {dev}),
         sapper.middleware({
             session: (req) => ({
-                'user-agent': req.headers['user-agent'],
+                ua: (new UAParser(req.headers['user-agent'])).getResult(),
             }),
         }),
     )
