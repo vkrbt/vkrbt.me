@@ -3,9 +3,9 @@ export function getRandom(min, max) {
 }
 
 export function getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1)) + min;
+    let minInt = Math.ceil(min);
+    let maxInt = Math.floor(max);
+    return Math.floor(Math.random() * (maxInt - minInt + 1)) + minInt;
 }
 
 export function getRandomBool() {
