@@ -9,10 +9,12 @@
     "start": "node __sapper__/build",
     "cy:run": "cypress run",
     "cy:open": "cypress open",
-    "test": "run-p --race dev cy:run"
+    "test": "run-p --race dev cy:run",
+    "prestart": "npm run build"
   },
   "dependencies": {
     "compression": "1.7.4",
+    "http-proxy-middleware": "^0.20.0",
     "polka": "next",
     "sanitize-html": "^1.20.1",
     "sirv": "0.4.2",
