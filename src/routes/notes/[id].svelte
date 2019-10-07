@@ -1,6 +1,6 @@
 <script context="module">
 	export async function preload({params}) {
-        const res = await this.fetch('http://127.0.0.1:8000/posts/' + params.id);
+        const res = await this.fetch('/api/posts/' + params.id);
 
         let post = await res.json();
 
