@@ -3,6 +3,8 @@ import polka from 'polka';
 import compression from 'compression';
 import UAParser from 'ua-parser-js';
 import proxy from 'http-proxy-middleware';
+import nanoid from 'nanoid';
+import helmet from 'helmet';
 import * as sapper from '@sapper/server';
 
 const {PORT, NODE_ENV} = process.env;
@@ -20,6 +22,24 @@ polka() // You can also use Express
             },
         }),
     )
+    .use((req, res, next) => {
+        res.locals = {
+            nonce: nanoid(),
+        };
+
+        next();
+    })
+    .use(helmet({
+        contentSecurityPolicy: {
+            directives: {
+                defaultSrc: ["'self'"],
+                scriptSrc: [
+                    "'self'",
+                    (req, res) => `'nonce-${res.nonce}'`,
+                ],
+            },
+        },
+    }))
     .use(
         compression({threshold: 0}),
         sirv('static', {dev}),
