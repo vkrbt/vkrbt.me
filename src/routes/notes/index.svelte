@@ -53,7 +53,6 @@
                         <a href="/notes/{post.id}">
                             <h2 class="note-item__head">
                                 {post.title}
-                                <span>{new Date(post.created).toLocaleDateString('ru')}</span>
                             </h2>
                             <p class="note-item__text">{post.description}</p>
                         </a>

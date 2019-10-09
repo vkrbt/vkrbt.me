@@ -2,6 +2,7 @@ const webpack = require('webpack');
 const path = require('path');
 const config = require('sapper/config/webpack.js');
 const pkg = require('./package.json');
+const svelteOptions = require('./svelte.config');
 
 const mode = process.env.NODE_ENV;
 const dev = mode === 'development';
@@ -10,17 +11,6 @@ const alias = {svelte: path.resolve('node_modules', 'svelte')};
 const extensions = ['.mjs', '.js', '.json', '.svelte', '.html'];
 const mainFields = ['svelte', 'module', 'browser', 'main'];
 const modules = [path.join(__dirname, 'src'), 'node_modules'];
-
-const preprocessOptions = {
-    transformers: {
-        postcss: {
-            plugins: [
-                require('postcss-import')(),
-                require('postcss-nested')(),
-            ],
-        },
-    },
-};
 
 module.exports = {
     client: {
@@ -42,7 +32,7 @@ module.exports = {
                             dev,
                             hydratable: true,
                             hotReload: false,
-                            preprocess: require('svelte-preprocess')(preprocessOptions),
+                            ...svelteOptions,
                         },
                     },
                 },
@@ -80,7 +70,7 @@ module.exports = {
                             css: false,
                             generate: 'ssr',
                             dev,
-                            preprocess: require('svelte-preprocess')(preprocessOptions),
+                            ...svelteOptions,
                         },
                     },
                 },

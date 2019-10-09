@@ -3,7 +3,7 @@ import polka from 'polka';
 import compression from 'compression';
 import UAParser from 'ua-parser-js';
 import proxy from 'http-proxy-middleware';
-import nanoid from 'nanoid';
+import crypto from 'crypto';
 import helmet from 'helmet';
 import * as sapper from '@sapper/server';
 
@@ -24,7 +24,7 @@ polka() // You can also use Express
     )
     .use((req, res, next) => {
         res.locals = {
-            nonce: nanoid(),
+            nonce: crypto.randomBytes(16).toString('hex'),
         };
 
         next();
@@ -33,9 +33,15 @@ polka() // You can also use Express
         contentSecurityPolicy: {
             directives: {
                 defaultSrc: ["'self'"],
+                styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+                fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+                ...(dev ? {
+                    connectSrc: ["'self'", 'http://localhost:10000', 'https://vkrbt.me'],
+                } : {}),
                 scriptSrc: [
                     "'self'",
-                    (req, res) => `'nonce-${res.nonce}'`,
+                    ...(dev ? ["'unsafe-inline'"] : []),
+                    (req, res) => `'nonce-${res.locals.nonce}'`,
                 ],
             },
         },

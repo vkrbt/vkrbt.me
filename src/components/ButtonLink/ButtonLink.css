@@ -58,7 +58,7 @@
     @media screen and (max-width: 576px) {
         top: auto;
         bottom: 0;
-        bottom: env(safe-area-inset-bottom);
+        bottom: calc(1.3 * env(safe-area-inset-bottom));
         right: 0;
         left: 0;
         opacity: 1;
