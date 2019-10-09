@@ -1,10 +1,14 @@
 <script context="module">
-	export async function preload() {
-        const res = await this.fetch('/api/posts');
+    import {get} from 'helpers/request';
 
-        let posts = await res.json();
+    export async function preload() {
+        try {
+            const posts = await get('/api/posts');
 
-        return {posts}
+            return {posts}
+        } catch (error) {
+            console.log(error);
+        }
 	}
 </script>
 
@@ -47,7 +51,10 @@
                 {#each posts as post}
                     <li class="note-item">
                         <a href="/notes/{post.id}">
-                            <h2 class="note-item__head">{post.title}</h2>
+                            <h2 class="note-item__head">
+                                {post.title}
+                                <span>{new Date(post.created).toLocaleDateString('ru')}</span>
+                            </h2>
                             <p class="note-item__text">{post.description}</p>
                         </a>
                     </li>

@@ -1,12 +1,14 @@
 <script context="module">
+    import {get} from 'helpers/request';
+
 	export async function preload({params}) {
-        const res = await this.fetch('/api/posts/' + params.id);
+        try {
+            const post = await get('/api/posts/' + params.id);
 
-        let post = await res.json();
-
-        post.body = post.body + '<script>alert(123)<\/script>';
-
-        return {post}
+            return {post}
+        } catch (error) {
+            console.log(error);
+        }
 	}
 </script>
 
@@ -22,6 +24,7 @@
 
 <svelte:head>
     <title>{post.title}</title>
+    <meta name="description" content={post.description} />
     <meta property="og:title" content={post.title} />
     <meta property="og:description" content={post.description} />
     <meta property="og:type" content="article" />
