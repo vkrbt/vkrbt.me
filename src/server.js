@@ -35,12 +35,18 @@ polka() // You can also use Express
                 defaultSrc: ["'self'"],
                 styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
                 fontSrc: ["'self'", 'https://fonts.gstatic.com'],
-                ...(dev ? {
-                    connectSrc: ["'self'", 'http://localhost:10000', 'https://vkrbt.me'],
-                } : {}),
+                connectSrc: [
+                    "'self'",
+                    'https://fonts.googleapis.com',
+                    'https://fonts.gstatic.com',
+                    ...(dev ? [
+                        'http://localhost:10000',
+                        'https://vkrbt.me',
+                    ] : []),
+                ],
                 scriptSrc: [
                     "'self'",
-                    ...(dev ? ["'unsafe-inline'"] : []),
+                    ...(dev ? ["'unsafe-eval'"] : []),
                     (req, res) => `'nonce-${res.locals.nonce}'`,
                 ],
             },
