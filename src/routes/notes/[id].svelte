@@ -15,11 +15,8 @@
 <script>
     import Container from 'components/Container/Container.svelte';
     import Note from 'components/Note/Note.svelte';
-    import sanitizeHtml from 'sanitize-html';
 
     export let post;
-
-    $: postBody = post && post.body && sanitizeHtml(post.body);
 </script>
 
 <svelte:head>
@@ -31,10 +28,10 @@
 </svelte:head>
 
 <Container href="/notes" label="К заметкам">
-    <Note>
-        {#if post}
+    {#if post}
+        <Note>
             <h1>{post.title}</h1>
-            {@html postBody}
-        {/if}
-    </Note>
+            {@html post.body}
+        </Note>
+    {/if}
 </Container>

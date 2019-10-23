@@ -14,16 +14,16 @@ export async function get(url, options) {
     }
 }
 
-export function post(url, options) {
-    let {headers, body, ...params} = options;
+export function post(url, data, options = {}) {
+    let {headers, ...params} = options;
 
-    return fetch(url, {
+    return get(url, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
             ...headers,
         },
-        body: JSON.stringify(body),
+        body: JSON.stringify(data),
         ...params,
     });
 }

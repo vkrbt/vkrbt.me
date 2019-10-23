@@ -5,4 +5,3 @@
 <article class="note">
     <slot />
 </article>
-
