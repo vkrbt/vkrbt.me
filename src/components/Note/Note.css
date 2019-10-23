@@ -1,10 +1,21 @@
 .note {
     max-width: 600px;
     margin: auto;
+    font-size: 18px;
+    line-height: 24px;
 
-    :global(p) {
-        font-size: 18px;
-        line-height: 24px;
+    :global(ul) {
+        margin: 0;
+        padding-left: 0;
+    }
+
+    :global(li) {
+        list-style-type: none;
+        &::before {
+            content: "•";
+            margin: 0 12px 0 0;
+            color: #ccc;
+        }
     }
 
     :global(.note) {
@@ -13,7 +24,7 @@
         hyphens: auto;
     }
 
-    :global(p) {
+    :global(p, ul) {
         padding-bottom: 16px;
     }
 

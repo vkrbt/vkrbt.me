@@ -3,22 +3,31 @@
 
     export async function preload() {
         try {
-            const posts = await get('/api/posts');
+            const posts = await get('/api/posts?filter[order]=created%20DESC');
 
-            return {posts}
+            return {posts};
         } catch (error) {
             console.log(error);
         }
-	}
+    }
 </script>
 
 <script>
     import Container from 'components/Container/Container.svelte';
+    import NoteCard from 'components/NoteCard/NoteCard.svelte';
 
     export let posts;
 </script>
 
 <style>
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+
+    li {
+        list-style: none;
+    }
     .notes {
         max-width: 600px;
         margin: auto;
@@ -26,11 +35,6 @@
 
     .note-item {
         padding: 16px 0;
-    }
-
-    .note-item__head {
-        margin: 0;
-        padding-bottom: 16px;
     }
 </style>
 
@@ -50,12 +54,11 @@
             <ul class="notes-list">
                 {#each posts as post}
                     <li class="note-item">
-                        <a href="/notes/{post.id}">
-                            <h2 class="note-item__head">
-                                {post.title}
-                            </h2>
-                            <p class="note-item__text">{post.description}</p>
-                        </a>
+                        <NoteCard
+                            id={post.id}
+                            title={post.title}
+                            description={post.description}
+                        />
                     </li>
                 {/each}
             </ul>

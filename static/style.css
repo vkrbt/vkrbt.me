@@ -342,15 +342,6 @@ template {
   display: none;
 }
 
-ul {
-  margin: 0;
-  padding: 0;
-}
-
-li, ol {
-  list-style: none;
-}
-
 /**
 * Add the correct display in IE 10.
 */
