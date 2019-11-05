@@ -11,7 +11,9 @@
     @import 'Container.css';
 </style>
 
-<div class="container {isButtonShown ? 'container_home' : ''}">
+<div
+    class="container"
+    class:container_home={isButtonShown}>
     <slot />
 
     {#if isButtonShown}

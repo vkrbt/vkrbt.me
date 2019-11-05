@@ -6,7 +6,11 @@ export async function get(url, options) {
     try {
         let response = await fetch(BASE_URL + url, options);
 
-        return response.json();
+        if (response.status === 200) {
+            return response.json();
+        }
+
+        throw response;
     } catch (err) {
         console.log(err);
 
