@@ -13,6 +13,10 @@
     @import 'ButtonLink.css';
 </style>
 
-<a class="button-link {isMobile ? 'button-link_no-animation' : ''}" {href}>
+<a
+    class="button-link"
+    class:button-link_no-animation={isMobile}
+    {href}
+>
     <slot />
 </a>

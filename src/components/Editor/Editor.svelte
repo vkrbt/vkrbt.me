@@ -1,6 +1,5 @@
 <script>
     import {onMount} from 'svelte';
-    import classNames from 'classnames';
     import Container from 'components/Container/Container.svelte';
 
     function execCommand(command, options = {}) {
@@ -152,10 +151,8 @@
         <ul class="controls">
             {#each commandsConfig as {className, param, label, command}}
                 <button
-                    class={classNames(className, {
-                        'editor-button': true,
-                        'editor-button__selected': currentTags.includes(label),
-                    })}
+                    class="editor-button {className}"
+                    class:editor-button__selected={currentTags.includes(label)}
                     on:click={() => execCommand(command, {param})}
                 >
                     {@html label}

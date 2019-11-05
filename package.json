@@ -13,12 +13,11 @@
     "prestart": "npm run build"
   },
   "dependencies": {
-    "classnames": "2.2.6",
     "compression": "1.7.4",
-    "helmet": "3.21.1",
+    "helmet": "3.21.2",
     "http-proxy-middleware": "0.20.0",
     "isomorphic-fetch": "2.2.1",
-    "polka": "next",
+    "polka": "^1.0.0-next.7",
     "sirv": "0.4.2",
     "ua-parser-js": "0.7.20"
   },

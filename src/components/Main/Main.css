@@ -21,6 +21,10 @@
     justify-content: center;
 }
 
+h2 {
+    margin-top: 0;
+}
+
 @media screen and (max-width: 576px) {
     .description {
         padding-left: 0;
