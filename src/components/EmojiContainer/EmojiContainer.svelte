@@ -1,4 +1,5 @@
 <script>
+    import {onMount, onDestroy} from 'svelte';
     import Emoji from 'components/Emoji/Emoji.svelte';
     import {generateEmoji} from 'helpers/generateEmoji';
     import {throttle} from 'helpers/throttle';
@@ -20,8 +21,27 @@
         DeviceOrientationEvent.requestPermissions();
     }
 
+    let isEmojisShown = !isOrientation;
+
+    let timeoutId;
+
+    onMount(() => {
+        timeoutId = setTimeout(() => {
+            isEmojisShown = true;
+        }, 200);
+    });
+
+    onDestroy(() => {
+        clearTimeout(timeoutId);
+    });
+
     export function handleDeviceOrientation(event) {
         requestAnimationFrame(() => {
+            if (!isEmojisShown) {
+                isEmojisShown = true;
+                clearTimeout(timeoutId);
+            }
+
             const maxX = window.innerWidth;
             const maxY = window.innerHeight;
 
@@ -58,6 +78,16 @@
 </script>
 
 <style>
+
+    @keyframes appear {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
     .emoji-container {
         overflow: hidden;
         position: fixed;
@@ -66,6 +96,7 @@
         bottom: 0;
         left: 0;
         z-index: -1;
+        animation: appear .1s ease-out;
     }
 </style>
 
@@ -74,12 +105,14 @@
     on:mousemove|passive={isOrientation ? null : handleMouseMove}
     on:deviceorientation|passive={isOrientation ? handleDeviceOrientation : null} />
 
-<div class="emoji-container">
-    {#each randomEmojis as emoji}
-        <Emoji
-            {...emoji}
-            {isOrientation}
-            movementX={currentXMovement}
-            movementY={currentYMovement} />
-    {/each}
-</div>
+{#if isEmojisShown}
+    <div class="emoji-container">
+        {#each randomEmojis as emoji}
+            <Emoji
+                {...emoji}
+                {isOrientation}
+                movementX={currentXMovement}
+                movementY={currentYMovement} />
+        {/each}
+    </div>
+{/if}
