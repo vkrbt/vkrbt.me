@@ -31,4 +31,12 @@
     :global(hr) {
         margin: 0 0 16px;
     }
+
+    :global(code) {
+        font-family: Menlo, Consolas, Monaco, monospace;
+        padding: 4px 8px;
+        font-size: 90%;
+        border-radius: 4px;
+        background: linear-gradient(90deg, #e5f2ff, #ebfeff);
+    }
 }
