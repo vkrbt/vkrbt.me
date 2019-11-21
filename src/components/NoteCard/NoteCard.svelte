@@ -10,7 +10,7 @@
     }
 </style>
 
-<a href="/notes/{id}">
+<a href="/notes/{id}/">
     <div>
         <h2>{title}</h2>
         <p>{description}</p>

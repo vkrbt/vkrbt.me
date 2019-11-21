@@ -3,7 +3,7 @@
     import Note from 'components/Note/Note.svelte';
 </script>
 
-<Container href="/notes" label="К заметкам">
+<Container href="/notes/" label="К заметкам">
     <Note>
         <h1>Что мне нравится в написании стилей на Svelte</h1>
         <p>В последнее время было много заслуженного хайпа вокруг Svelte, а <a href="https://github.com/sveltejs/svelte">проект собрал более 24,000 звезд на GitHub</a>. Вероятно, самый простой JavaScript фреймворк, Svelte написан Ричем Харрисом, разработчиком стоящим за Rollup. Svelte можно полюбить за многое(производильность, встероенное управление состоянием, написание более правильной разметки, чем JSX), но меня больше привлек его подход к написанию CSS</p>

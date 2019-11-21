@@ -12,6 +12,6 @@
     <meta property="og:image:height" content="200" />
 </svelte:head>
 
-<Container href="/notes" label="Мои Заметки">
+<Container href="/notes/" label="Мои Заметки" showEmoji>
     <Main />
 </Container>
