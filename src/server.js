@@ -10,13 +10,14 @@ import * as sapper from '@sapper/server';
 const {PORT, NODE_ENV} = process.env;
 const dev = NODE_ENV === 'development';
 
-const TRAILING_SLASHES_REGEX = /\/+$/;
+const ASSETS_REGEX = /\.\w+$/;
+const API_REGEX = /^\/api/;
 
 polka() // You can also use Express
     .use((req, res, next) => {
-        if (TRAILING_SLASHES_REGEX.test(req.path)) {
+        if (!ASSETS_REGEX.test(req.path) && !API_REGEX.test(req.path) && req.path.slice(-1) !== '/') {
             res.writeHead(301, {
-                Location: req.path.replace(TRAILING_SLASHES_REGEX, ''),
+                Location: `${req.path}/${req.search || ''}`,
                 'Content-Type': 'text/plain',
             });
             res.end();

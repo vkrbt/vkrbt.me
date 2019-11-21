@@ -1,6 +1,4 @@
 <script>
-    import EmojiContainer from 'components/EmojiContainer/EmojiContainer.svelte';
-
     let birthday = Date.UTC(1998, 5, 8);
     let today = Date.now();
     let ageInSeconds = today - birthday;
@@ -26,6 +24,3 @@
         </p>
     </div>
 </main>
-{#if process.browser}
-    <EmojiContainer number={50} />
-{/if}

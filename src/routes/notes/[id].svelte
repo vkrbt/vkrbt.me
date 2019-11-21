@@ -7,7 +7,7 @@
 
             return {post}
         } catch (error) {
-            console.log(error);
+            this.error(404, 'Not found');
         }
 	}
 </script>
@@ -27,7 +27,7 @@
     <meta property="og:type" content="article" />
 </svelte:head>
 
-<Container href="/notes" label="К заметкам">
+<Container href="/notes/" label="К заметкам">
     {#if post}
         <Note>
             <h1>{post.title}</h1>

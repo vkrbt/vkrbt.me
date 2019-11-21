@@ -1,10 +1,13 @@
 <script>
     import ButtonLink from 'components/ButtonLink/ButtonLink.svelte';
+    import EmojiContainer from 'components/EmojiContainer/EmojiContainer.svelte';
 
     export let href;
     export let label;
+    export let showEmoji;
 
     const isButtonShown = href && label;
+    const isEmojiShown = process.browser && showEmoji;
 </script>
 
 <style>
@@ -18,5 +21,9 @@
 
     {#if isButtonShown}
         <ButtonLink {href}>{label}</ButtonLink>
+    {/if}
+
+    {#if isEmojiShown}
+        <EmojiContainer number={50} />
     {/if}
 </div>
