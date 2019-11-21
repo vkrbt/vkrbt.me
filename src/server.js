@@ -10,7 +10,20 @@ import * as sapper from '@sapper/server';
 const {PORT, NODE_ENV} = process.env;
 const dev = NODE_ENV === 'development';
 
+const TRAILING_SLASHES_REGEX = /\/+$/;
+
 polka() // You can also use Express
+    .use((req, res, next) => {
+        if (TRAILING_SLASHES_REGEX.test(req.path)) {
+            res.writeHead(301, {
+                Location: req.path.replace(TRAILING_SLASHES_REGEX, ''),
+                'Content-Type': 'text/plain',
+            });
+            res.end();
+        }
+
+        next();
+    })
     .use(
         '/api',
         proxy({
