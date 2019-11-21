@@ -20,9 +20,9 @@
 </script>
 
 <svelte:head>
-    <title>{post.title}</title>
+    <title>{post.title} | Заметки Влада Корбута</title>
     <meta name="description" content={post.description} />
-    <meta property="og:title" content={post.title} />
+    <meta property="og:title" content="{post.title} | Заметки Влада Корбута" />
     <meta property="og:description" content={post.description} />
     <meta property="og:type" content="article" />
 </svelte:head>
