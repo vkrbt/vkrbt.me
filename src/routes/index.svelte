@@ -5,6 +5,7 @@
 
 <svelte:head>
     <title>Влад Корбут | Разработчик интерфейсов</title>
+    <meta property="description" content="" />
     <meta property="og:title" content="Влад Корбут | Разработчик интерфейсов" />
     <meta property="og:image" content="https://vkrbt.me/vkrbt@2x.jpg" />
     <meta property="og:type" content="website" />
