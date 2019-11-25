@@ -2,7 +2,6 @@ const preprocessOptions = {
     transformers: {
         postcss: {
             plugins: [
-                require('postcss-import')(),
                 require('postcss-nested')(),
             ],
         },

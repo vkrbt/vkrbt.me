@@ -1,4 +1,7 @@
 <script>
+    import src from 'components/Main/vkrbt.jpg';
+    import src2x from 'components/Main/vkrbt@2x.jpg';
+
     let birthday = Date.UTC(1998, 5, 8);
     let today = Date.now();
     let ageInSeconds = today - birthday;
@@ -6,12 +9,52 @@
     export let ageInYears = Math.floor(ageInSeconds / (60 * 60 * 24 * 365.25 * 1000));
 </script>
 
-<style>
-    @import 'Main.css';
+<style type="text/postcss">
+    .content {
+        display: flex;
+        padding: 16px;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
+    }
+
+    .description {
+        min-height: 200px;
+        padding-left: 16px;
+        background: rgba(255, 255, 255, 0.7);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    h2 {
+        margin-top: 0;
+    }
+
+    @media screen and (max-width: 576px) {
+        .description {
+            padding-left: 0;
+            text-align: center;
+        }
+        .content {
+            flex-direction: column;
+        }
+    }
+
+    .picture {
+        width: 200px;
+        height: 200px;
+    }
 </style>
 
 <main class="content">
-    <img class="picture" src="vkrbt.jpg" srcset="vkrbt@2x.jpg 2x" alt="мой портрет" />
+    <img class="picture" {src} srcset="{src2x} 2x" alt="мой портрет" />
     <div class="description">
         <h1>Я Влад Корбут</h1>
         <h2>Разработчик интерфейсов</h2>

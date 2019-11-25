@@ -12,6 +12,26 @@ const extensions = ['.mjs', '.js', '.json', '.svelte', '.html'];
 const mainFields = ['svelte', 'module', 'browser', 'main'];
 const modules = [path.join(__dirname, 'src'), 'node_modules'];
 
+let commonRules = [
+    ...(!dev ? [{
+        test: /\.(jpg|png|gif|svg)$/,
+        loader: 'image-webpack-loader',
+        enforce: 'pre',
+    }] : []),
+    {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+            {
+                loader: 'file-loader',
+                options: {
+                    name: '[name].[ext]',
+                    outputPath: 'images',
+                },
+            },
+        ],
+    },
+];
+
 module.exports = {
     client: {
         entry: config.client.entry(),
@@ -24,6 +44,7 @@ module.exports = {
         },
         module: {
             rules: [
+                ...commonRules,
                 {
                     test: /\.(svelte|html)$/,
                     use: {
@@ -62,6 +83,7 @@ module.exports = {
         externals: Object.keys(pkg.dependencies).concat('encoding'),
         module: {
             rules: [
+                ...commonRules,
                 {
                     test: /\.(svelte|html)$/,
                     use: {
