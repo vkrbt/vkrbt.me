@@ -12,25 +12,30 @@ const extensions = ['.mjs', '.js', '.json', '.svelte', '.html'];
 const mainFields = ['svelte', 'module', 'browser', 'main'];
 const modules = [path.join(__dirname, 'src'), 'node_modules'];
 
-let commonRules = [
-    ...(!dev ? [{
-        test: /\.(jpg|png|gif|svg)$/,
-        loader: 'image-webpack-loader',
-        enforce: 'pre',
-    }] : []),
-    {
+function getCommonRules({isDevMode, isServer}) {
+    let rules = [{
         test: /\.(png|jpe?g|gif)$/i,
         use: [
             {
                 loader: 'file-loader',
                 options: {
-                    name: '[name].[ext]',
-                    outputPath: 'images',
+                    // fixes different paths while SSR
+                    name: isServer ? 'client/images/[name].[ext]' : 'images/[name].[ext]',
                 },
             },
         ],
-    },
-];
+    }];
+
+    if (!isDevMode) {
+        rules.push({
+            test: /\.(jpg|png|gif|svg)$/,
+            loader: 'image-webpack-loader',
+            enforce: 'pre',
+        });
+    }
+
+    return rules;
+}
 
 module.exports = {
     client: {
@@ -44,7 +49,10 @@ module.exports = {
         },
         module: {
             rules: [
-                ...commonRules,
+                ...getCommonRules({
+                    isDevMode: dev,
+                    isServer: false,
+                }),
                 {
                     test: /\.(svelte|html)$/,
                     use: {
@@ -83,7 +91,10 @@ module.exports = {
         externals: Object.keys(pkg.dependencies).concat('encoding'),
         module: {
             rules: [
-                ...commonRules,
+                ...getCommonRules({
+                    isDevMode: dev,
+                    isServer: true,
+                }),
                 {
                     test: /\.(svelte|html)$/,
                     use: {
