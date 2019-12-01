@@ -10,6 +10,18 @@
     const isEmojiShown = process.browser && showEmoji;
 </script>
 
+<div class="container" class:container_home="{isButtonShown}">
+    <slot />
+
+    {#if isButtonShown}
+        <ButtonLink {href}>{label}</ButtonLink>
+    {/if}
+
+    {#if isEmojiShown}
+        <EmojiContainer number="{50}" />
+    {/if}
+</div>
+
 <style type="text/postcss">
     .container {
         padding: 16px;
@@ -22,17 +34,3 @@
         }
     }
 </style>
-
-<div
-    class="container"
-    class:container_home={isButtonShown}>
-    <slot />
-
-    {#if isButtonShown}
-        <ButtonLink {href}>{label}</ButtonLink>
-    {/if}
-
-    {#if isEmojiShown}
-        <EmojiContainer number={50} />
-    {/if}
-</div>

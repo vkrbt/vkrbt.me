@@ -9,6 +9,10 @@
     export let href;
 </script>
 
+<a class="button-link" class:button-link_no-animation="{isMobile}" {href}>
+    <slot />
+</a>
+
 <style type="text/postcss">
     .button-link {
         position: fixed;
@@ -77,11 +81,3 @@
         }
     }
 </style>
-
-<a
-    class="button-link"
-    class:button-link_no-animation={isMobile}
-    {href}
->
-    <slot />
-</a>

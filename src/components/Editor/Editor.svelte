@@ -67,7 +67,7 @@
                 tags.push(tagName);
             }
 
-            parentNode = parentNode.parentNode
+            parentNode = parentNode.parentNode;
         }
 
         if (parentNode !== highestNode) {
@@ -87,8 +87,24 @@
     onMount(() => {
         document.addEventListener('selectionchange', handleSelectionChange);
     });
-
 </script>
+
+<Container>
+    <div class="editor">
+        <ul class="controls">
+            {#each commandsConfig as {className, param, label, command}}
+                <button
+                    class="editor-button {className}"
+                    class:editor-button__selected="{currentTags.includes(label)}"
+                    on:click="{() => execCommand(command, {param})}"
+                >
+                    {@html label}
+                </button>
+            {/each}
+        </ul>
+        <div bind:this="{editorTextArea}" class="html-editor" contenteditable="true"></div>
+    </div>
+</Container>
 
 <style>
     .italic {
@@ -100,7 +116,7 @@
     }
 
     .editor {
-        --main-border-color: rgba(0, 0, 0, .5);
+        --main-border-color: rgba(0, 0, 0, 0.5);
     }
 
     .controls {
@@ -145,24 +161,3 @@
         min-height: 300px;
     }
 </style>
-
-<Container>
-    <div class="editor">
-        <ul class="controls">
-            {#each commandsConfig as {className, param, label, command}}
-                <button
-                    class="editor-button {className}"
-                    class:editor-button__selected={currentTags.includes(label)}
-                    on:click={() => execCommand(command, {param})}
-                >
-                    {@html label}
-                </button>
-            {/each}
-        </ul>
-        <div
-            bind:this={editorTextArea}
-            class="html-editor"
-            contenteditable="true"
-        />
-    </div>
-</Container>

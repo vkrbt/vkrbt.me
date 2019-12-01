@@ -77,8 +77,26 @@
     }, 150);
 </script>
 
-<style>
+<svelte:window
+    on:resize|passive="{updateEmoji}"
+    on:mousemove|passive="{isOrientation ? null : handleMouseMove}"
+    on:deviceorientation|passive="{isOrientation ? handleDeviceOrientation : null}"
+/>
 
+{#if isEmojisShown}
+    <div class="emoji-container">
+        {#each randomEmojis as emoji}
+            <Emoji
+                {...emoji}
+                {isOrientation}
+                movementX="{currentXMovement}"
+                movementY="{currentYMovement}"
+            />
+        {/each}
+    </div>
+{/if}
+
+<style>
     @keyframes appear {
         from {
             opacity: 0;
@@ -96,23 +114,6 @@
         bottom: 0;
         left: 0;
         z-index: -1;
-        animation: appear .1s ease-out;
+        animation: appear 0.2s ease-out;
     }
 </style>
-
-<svelte:window
-    on:resize|passive={updateEmoji}
-    on:mousemove|passive={isOrientation ? null : handleMouseMove}
-    on:deviceorientation|passive={isOrientation ? handleDeviceOrientation : null} />
-
-{#if isEmojisShown}
-    <div class="emoji-container">
-        {#each randomEmojis as emoji}
-            <Emoji
-                {...emoji}
-                {isOrientation}
-                movementX={currentXMovement}
-                movementY={currentYMovement} />
-        {/each}
-    </div>
-{/if}

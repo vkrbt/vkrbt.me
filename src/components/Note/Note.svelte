@@ -1,3 +1,7 @@
+<article class="note">
+    <slot />
+</article>
+
 <style type="text/postcss">
     .note {
         max-width: 600px;
@@ -13,7 +17,7 @@
         :global(li) {
             list-style-type: none;
             &::before {
-                content: "•";
+                content: '•';
                 margin: 0 12px 0 0;
                 color: #ccc;
             }
@@ -42,7 +46,3 @@
         }
     }
 </style>
-
-<article class="note">
-    <slot />
-</article>
