@@ -15,7 +15,11 @@ const API_REGEX = /^\/api/;
 
 polka() // You can also use Express
     .use((req, res, next) => {
-        if (!ASSETS_REGEX.test(req.path) && !API_REGEX.test(req.path) && req.path.slice(-1) !== '/') {
+        if (
+            !ASSETS_REGEX.test(req.path) &&
+            !API_REGEX.test(req.path) &&
+            req.path.slice(-1) !== '/'
+        ) {
             res.writeHead(301, {
                 Location: `${req.path}/${req.search || ''}`,
                 'Content-Type': 'text/plain',
@@ -43,35 +47,34 @@ polka() // You can also use Express
 
         next();
     })
-    .use(helmet({
-        contentSecurityPolicy: {
-            directives: {
-                defaultSrc: ["'self'"],
-                styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
-                fontSrc: ["'self'", 'https://fonts.gstatic.com'],
-                connectSrc: [
-                    "'self'",
-                    'https://fonts.googleapis.com',
-                    'https://fonts.gstatic.com',
-                    ...(dev ? [
-                        'http://localhost:10000',
-                        'https://vkrbt.me',
-                    ] : []),
-                ],
-                scriptSrc: [
-                    "'self'",
-                    ...(dev ? ["'unsafe-eval'"] : []),
-                    (req, res) => `'nonce-${res.locals.nonce}'`,
-                ],
+    .use(
+        helmet({
+            contentSecurityPolicy: {
+                directives: {
+                    defaultSrc: ["'self'"],
+                    styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
+                    fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+                    connectSrc: [
+                        "'self'",
+                        'https://fonts.googleapis.com',
+                        'https://fonts.gstatic.com',
+                        ...(dev ? ['http://localhost:10000', 'https://vkrbt.me'] : []),
+                    ],
+                    scriptSrc: [
+                        "'self'",
+                        ...(dev ? ["'unsafe-eval'"] : []),
+                        (req, res) => `'nonce-${res.locals.nonce}'`,
+                    ],
+                },
             },
-        },
-    }))
+        }),
+    )
     .use(
         compression({threshold: 0}),
         sirv('static', {dev}),
         sapper.middleware({
             session: (req) => ({
-                ua: (new UAParser(req.headers['user-agent'])).getResult(),
+                ua: new UAParser(req.headers['user-agent']).getResult(),
             }),
         }),
     )

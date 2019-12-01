@@ -23,8 +23,8 @@
     }
 </script>
 
-<form on:submit={preventSubmit}>
-    <input type="text" bind:value={email} placeholder="email">
-    <input type="password" bind:value={password} placeholder="password">
-    <button on:click={onSubmit} type="submit">Submit</button>
+<form on:submit="{preventSubmit}">
+    <input type="text" bind:value="{email}" placeholder="email" />
+    <input type="password" bind:value="{password}" placeholder="password" />
+    <button on:click="{onSubmit}" type="submit">Submit</button>
 </form>

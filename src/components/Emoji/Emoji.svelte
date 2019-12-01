@@ -17,6 +17,10 @@
     $: currentY = y + movementY * randomSpeed;
 </script>
 
+<span style="transform: translate({currentX}px, {currentY}px)" class="float-emoji">
+    {@html emoji}
+</span>
+
 <style>
     .float-emoji {
         display: block;
@@ -27,7 +31,3 @@
         left: 0;
     }
 </style>
-
-<span style="transform: translate({currentX}px, {currentY}px)" class="float-emoji">
-    {@html emoji}
-</span>

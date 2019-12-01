@@ -1,6 +1,6 @@
 <script>
-    import src from 'components/Main/vkrbt.jpg';
-    import src2x from 'components/Main/vkrbt@2x.jpg';
+    import src from 'images/vkrbt.jpg';
+    import src2x from 'images/vkrbt@2x.jpg';
 
     let birthday = Date.UTC(1998, 5, 8);
     let today = Date.now();
@@ -8,6 +8,21 @@
 
     export let ageInYears = Math.floor(ageInSeconds / (60 * 60 * 24 * 365.25 * 1000));
 </script>
+
+<main class="content">
+    <img class="picture" {src} srcset="{src2x} 2x" alt="мой портрет" />
+    <div class="description">
+        <h1>Я Влад Корбут</h1>
+        <h2>Разработчик интерфейсов</h2>
+        <p>Мне {ageInYears}, а живу я Минске.</p>
+        <p>
+            Для связи со мной можно использовать
+            <a href="https://t.me/vkrbt/">телеграм</a>
+            или
+            <a href="mailto:vkrbt.me">email</a>
+        </p>
+    </div>
+</main>
 
 <style type="text/postcss">
     .content {
@@ -52,18 +67,3 @@
         height: 200px;
     }
 </style>
-
-<main class="content">
-    <img class="picture" {src} srcset="{src2x} 2x" alt="мой портрет" />
-    <div class="description">
-        <h1>Я Влад Корбут</h1>
-        <h2>Разработчик интерфейсов</h2>
-        <p>Мне {ageInYears}, а живу я Минске.</p>
-        <p>
-            Для связи со мной можно использовать
-            <a href="https://t.me/vkrbt/">телеграм</a>
-            или
-            <a href="mailto:vkrbt.me">email</a>
-        </p>
-    </div>
-</main>
