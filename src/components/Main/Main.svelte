@@ -65,5 +65,6 @@
     .picture {
         width: 200px;
         height: 200px;
+        clip-path: polygon(93% 8%, 100% 96%, 0% 100%, 5% 0%);
     }
 </style>
