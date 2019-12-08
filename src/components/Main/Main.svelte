@@ -19,7 +19,7 @@
             Для связи со мной можно использовать
             <a href="https://t.me/vkrbt/">телеграм</a>
             или
-            <a href="mailto:vkrbt.me">email</a>
+            <a href="mailto:vkrbt@ya.ru">email</a>
         </p>
     </div>
 </main>
