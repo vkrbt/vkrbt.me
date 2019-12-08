@@ -1,8 +1,8 @@
 {
 	"background_color": "#ffffff",
 	"theme_color": "#dfc25a",
-	"name": "Vlad Korbut | Frontend Developer",
-	"short_name": "Vlad Korbut",
+	"name": "Влад Корбут | Разработчик интерфейсов",
+	"short_name": "Влад Корбут",
 	"display": "standalone",
 	"start_url": "/",
 	"icons": [
