@@ -13,18 +13,20 @@ const mainFields = ['svelte', 'module', 'browser', 'main'];
 const modules = [path.join(__dirname, 'src'), 'node_modules'];
 
 function getCommonRules({isDevMode, isServer}) {
-    let rules = [{
-        test: /\.(png|jpe?g|gif)$/i,
-        use: [
-            {
-                loader: 'file-loader',
-                options: {
-                    // fixes different paths while SSR
-                    name: isServer ? 'client/images/[name].[ext]' : 'images/[name].[ext]',
+    let rules = [
+        {
+            test: /\.(png|jpe?g|gif)$/i,
+            use: [
+                {
+                    loader: 'file-loader',
+                    options: {
+                        // fixes different paths while SSR
+                        name: isServer ? 'client/images/[name].[ext]' : 'images/[name].[ext]',
+                    },
                 },
-            },
-        ],
-    }];
+            ],
+        },
+    ];
 
     if (!isDevMode) {
         rules.push({

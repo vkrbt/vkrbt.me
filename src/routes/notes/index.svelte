@@ -57,6 +57,7 @@
     li {
         list-style: none;
     }
+
     .notes {
         max-width: 600px;
         margin: auto;

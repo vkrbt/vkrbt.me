@@ -2,15 +2,17 @@
     import ButtonLink from 'components/ButtonLink/ButtonLink.svelte';
     import EmojiContainer from 'components/EmojiContainer/EmojiContainer.svelte';
 
+    let className;
     export let href;
     export let label;
     export let showEmoji;
+    export { className as class };
 
     const isButtonShown = href && label;
     const isEmojiShown = process.browser && showEmoji;
 </script>
 
-<div class="container" class:container_home="{isButtonShown}">
+<div class="container {className}" class:container_home="{isButtonShown}">
     <slot />
 
     {#if isButtonShown}
