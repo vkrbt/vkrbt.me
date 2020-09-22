@@ -26,6 +26,13 @@ function getCommonRules({isDevMode, isServer}) {
                 },
             ],
         },
+        {
+            test: /\.svg$/,
+            loader: 'svg-inline-loader',
+            options: {
+                removeSVGTagAttrs: false,
+            },
+        },
     ];
 
     if (!isDevMode) {

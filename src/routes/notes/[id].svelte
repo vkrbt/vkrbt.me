@@ -13,7 +13,6 @@
 </script>
 
 <script>
-    import Container from 'components/Container/Container.svelte';
     import Note from 'components/Note/Note.svelte';
 
     export let post;
@@ -27,11 +26,9 @@
     <meta property="og:type" content="article" />
 </svelte:head>
 
-<Container href="/notes/" label="К заметкам">
-    {#if post}
-        <Note>
-            <h1>{post.title}</h1>
-            {@html post.body}
-        </Note>
-    {/if}
-</Container>
+{#if post}
+    <Note>
+        <h1>{post.title}</h1>
+        {@html post.body}
+    </Note>
+{/if}

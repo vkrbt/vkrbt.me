@@ -13,7 +13,6 @@
 </script>
 
 <script>
-    import Container from 'components/Container/Container.svelte';
     import NoteCard from 'components/NoteCard/NoteCard.svelte';
     import photo from 'images/vkrbt@2x.jpg';
 
@@ -29,24 +28,22 @@
     <meta property="og:image:height" content="200" />
 </svelte:head>
 
-<Container href="/" label="На главную">
-    <section class="notes">
-        <h1>Мои заметки</h1>
-        {#if posts}
-            <ul class="notes-list">
-                {#each posts as post}
-                    <li class="note-item">
-                        <NoteCard
-                            id="{post.id}"
-                            title="{post.title}"
-                            description="{post.description}"
-                        />
-                    </li>
-                {/each}
-            </ul>
-        {/if}
-    </section>
-</Container>
+<section class="notes">
+    <h1>Мои заметки</h1>
+    {#if posts}
+        <ul class="notes-list">
+            {#each posts as post}
+                <li class="note-item">
+                    <NoteCard
+                        id="{post.id}"
+                        title="{post.title}"
+                        description="{post.description}"
+                    />
+                </li>
+            {/each}
+        </ul>
+    {/if}
+</section>
 
 <style>
     ul {

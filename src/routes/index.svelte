@@ -1,6 +1,5 @@
 <script>
     import Main from 'components/Main/Main.svelte';
-    import Container from 'components/Container/Container.svelte';
     import photo from 'images/vkrbt@2x.jpg';
 </script>
 
@@ -14,6 +13,4 @@
     <meta property="og:image:height" content="200" />
 </svelte:head>
 
-<Container href="/notes/" label="Мои Заметки" showEmoji>
-    <Main />
-</Container>
+<Main />

@@ -1,6 +1,5 @@
 <script>
     import {onMount} from 'svelte';
-    import Container from 'components/Container/Container.svelte';
 
     function execCommand(command, options = {}) {
         console.log(command, options);
@@ -89,7 +88,6 @@
     });
 </script>
 
-<Container>
     <div class="editor">
         <ul class="controls">
             {#each commandsConfig as {className, param, label, command}}
@@ -104,7 +102,6 @@
         </ul>
         <div bind:this="{editorTextArea}" class="html-editor" contenteditable="true"></div>
     </div>
-</Container>
 
 <style>
     .italic {
