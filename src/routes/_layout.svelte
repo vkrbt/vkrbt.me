@@ -1,17 +1,17 @@
 <script>
     import EmojiContainer from 'components/EmojiContainer/EmojiContainer.svelte';
     import Menu from 'components/Menu/Menu.svelte';
+    import {stores} from '@sapper/app';
 
-    export let showEmoji;
-
-    const isEmojiShown = process.browser && showEmoji;
+    let {page} = stores();
+    let path = $page.path;
 </script>
 
 <div class="container">
     <Menu />
     <slot />
 
-    {#if isEmojiShown}
+    {#if process.browser && $page.path === '/'}
         <EmojiContainer number="{50}" />
     {/if}
 </div>

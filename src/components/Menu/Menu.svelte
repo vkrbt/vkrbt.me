@@ -6,9 +6,10 @@
 
     let {page} = stores();
     let path = $page.path;
-    let isMenuHidden = false;
 
     $: currentPath = $page.path;
+    let isMenuHidden = $page.path === '/me/';
+
     let links = [
         {
             href: '/notes/',
