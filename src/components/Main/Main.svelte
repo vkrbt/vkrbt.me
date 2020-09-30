@@ -1,12 +1,13 @@
 <script>
     import src from 'images/vkrbt.jpg';
     import src2x from 'images/vkrbt@2x.jpg';
+    import {SECONDS_IN_YEAR} from 'constants/default';
 
     let birthday = Date.UTC(1998, 5, 8);
     let today = Date.now();
     let ageInSeconds = today - birthday;
 
-    export let ageInYears = Math.floor(ageInSeconds / (60 * 60 * 24 * 365.25 * 1000));
+    export let ageInYears = Math.floor(ageInSeconds / SECONDS_IN_YEAR);
 </script>
 
 <main class="content">

@@ -1,6 +1,19 @@
 <script>
     import src from 'images/vkrbt.jpg';
     import src2x from 'images/vkrbt@2x.jpg';
+    import {SECONDS_IN_YEAR} from 'constants/default';
+    import {getPluralForm} from 'helpers/getPluralForm';
+    import {decimalRound} from 'helpers/decimalRound';
+
+    let startExperience = Date.UTC(2017, 8, 29);
+    let today = Date.now();
+    let experience = (today - startExperience) / SECONDS_IN_YEAR;
+
+    let experienceSting = getPluralForm(decimalRound(experience, 1), [
+        'год',
+        'года',
+        'лет',
+    ]);
 </script>
 
 <svelte:head>
@@ -14,10 +27,12 @@
 </svelte:head>
 
 <div class="notes">
-    <div>
+    <div class="head">
         <img class="picture" {src} srcset="{src2x} 2x" alt="мой портрет" />
-        <h1>Влад Корбут</h1>
-        <h2>Разработчик интерфейсов</h2>
+        <div>
+            <h1>Влад Корбут</h1>
+            <h2>Разработчик интерфейсов</h2>
+        </div>
     </div>
     <h3>О Себе</h3>
     <p>Люблю простые и удобные интерфейсы. Делаю сложные вещи проще.</p>
@@ -34,7 +49,7 @@
             <a href="mailto:vkrbt@ya.ru">Почта</a>
         </li>
     </ul>
-    <h3>Опыт работы</h3>
+    <h3>Опыт работы <span class="experience">{experienceSting}</span></h3>
     <ul>
         <li>
             <h4>Яндекс. октябрь 2018 — настоящее время</h4>
@@ -112,6 +127,22 @@
 </div>
 
 <style>
+    .head {
+        display: flex;
+        align-items: center;
+    }
+
+    .experience {
+        margin-left: 8px;
+        opacity: 0.5;
+    }
+
+    @media screen and (max-width: 576px) {
+        .head {
+            align-items: flex-start;
+            flex-direction: column;
+        }
+    }
     .picture {
         float: left;
         margin: 0 16px 16px 0;
@@ -130,7 +161,17 @@
         margin-top: 4px;
     }
 
+    li + li {
+        margin-top: 4px;
+    }
+
     ul {
-        padding-left: 16px;
+        padding-left: 28px;
+    }
+
+    @media screen and (max-width: 576px) {
+        ul {
+            padding-left: 16px;
+        }
     }
 </style>
