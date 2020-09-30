@@ -6,9 +6,10 @@
 
     let {page} = stores();
     let path = $page.path;
+    const EXCLUDED_ROUTES = ['/me/', '/cv/']
 
     $: currentPath = $page.path;
-    let isMenuHidden = $page.path === '/me/';
+    let isMenuHidden = EXCLUDED_ROUTES.includes($page.path);
 
     let links = [
         {
@@ -32,23 +33,24 @@
     ];
 </script>
 
-<nav>
-    <ul class="menu" class:menu_hidden="{isMenuHidden}">
-        {#each links as link}
-            <li class="menu-item">
-                <a
-                    class="link link_{link.classMod}"
-                    class:link_active="{currentPath === link.href}"
-                    href="{link.href}"
-                >
-                    {@html link.icon}
-                    {link.label}
-                </a>
-            </li>
-        {/each}
-    </ul>
-
-</nav>
+{#if !isMenuHidden}
+    <nav>
+        <ul class="menu">
+            {#each links as link}
+                <li class="menu-item">
+                    <a
+                        class="link link_{link.classMod}"
+                        class:link_active="{currentPath === link.href}"
+                        href="{link.href}"
+                    >
+                        {@html link.icon}
+                        {link.label}
+                    </a>
+                </li>
+            {/each}
+        </ul>
+    </nav>
+{/if}
 
 <style>
     .menu {
