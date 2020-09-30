@@ -52,22 +52,32 @@
 
 <style>
     .menu {
+        min-width: 320px;
+        margin: auto;
         list-style: none;
         z-index: 100;
+        right: 16px;
+        top: 16px;
         position: fixed;
-        bottom: 8px;
-        left: 8px;
-        right: 8px;
         display: flex;
         background: #fff;
         border-radius: 16px;
-        border: 2px solid rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(0, 0, 0, 0.1);
         padding: 0;
         transform: translateY(0%);
         transition: transform 0.5s cubic-bezier(0.04, 0.69, 0.54, 1.13);
 
         &_hidden {
             transform: translateY(150%);
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .menu {
+            top: auto;
+            bottom: 8px;
+            left: 8px;
+            right: 8px;
         }
     }
 
