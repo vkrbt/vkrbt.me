@@ -9,11 +9,7 @@
     let today = Date.now();
     let experience = (today - startExperience) / SECONDS_IN_YEAR;
 
-    let experienceSting = getPluralForm(decimalRound(experience, 1), [
-        'год',
-        'года',
-        'лет',
-    ]);
+    let experienceSting = getPluralForm(decimalRound(experience, 1), ['год', 'года', 'лет']);
 </script>
 
 <svelte:head>
@@ -49,7 +45,10 @@
             <a href="mailto:vkrbt@ya.ru">Почта</a>
         </li>
     </ul>
-    <h3>Опыт работы<span class="experience">{experienceSting}</span></h3>
+    <h3>
+        Опыт работы
+        <span class="experience">{experienceSting}</span>
+    </h3>
     <ul>
         <li>
             <h4>Яндекс. октябрь 2018 — настоящее время</h4>
@@ -59,6 +58,7 @@
                     <h4>Основные обязанности</h4>
                     <ul>
                         <li>Разработка интерфейса сервиса</li>
+                        <li>Разработка приложения для бета-тестирования</li>
                         <li>Редизайн крупных основных частей приложения</li>
                         <li>Плотная работа с продуктом и дизайном</li>
                         <li>Интеграция с видеосервисом</li>
