@@ -76,6 +76,7 @@
 
     @media screen and (max-width: 576px) {
         .menu {
+            min-width: auto;
             top: auto;
             bottom: 8px;
             left: 8px;
