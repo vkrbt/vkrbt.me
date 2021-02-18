@@ -5,10 +5,13 @@
 
     let {page} = stores();
     let path = $page.path;
+    console.log($page.path);
 </script>
 
 <div class="container">
-    <Menu />
+    {#if !$page.path.includes('/verbs')}
+        <Menu />
+    {/if}
     <slot />
 
     {#if process.browser && $page.path === '/'}

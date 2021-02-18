@@ -4,6 +4,8 @@
 
 <a href="/me/">cv</a>
 <a href="/cv/">cv detailed</a>
+<a href="/eng/">cv eng</a>
+<a href="/verbs/">irregular verbs</a>
 
 <style>
     a {
