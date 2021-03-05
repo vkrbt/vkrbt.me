@@ -5,11 +5,11 @@
 
     let {page} = stores();
     let path = $page.path;
-    console.log($page.path);
+    const ROUTES_WITHOUT_MENU = ['verbs', 'me', 'cv', 'eng'].map((route) => `/${route}/`)
 </script>
 
 <div class="container">
-    {#if !$page.path.includes('/verbs')}
+    {#if !ROUTES_WITHOUT_MENU.includes($page.path)}
         <Menu />
     {/if}
     <slot />

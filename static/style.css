@@ -408,3 +408,13 @@ hr {
 * {
   box-sizing: border-box;
 }
+
+@media print {
+  .email:before {
+    content: attr(data-mail);
+  }
+
+  .email span {
+    display: none;
+  }
+}

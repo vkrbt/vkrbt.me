@@ -31,7 +31,7 @@
         </div>
     </div>
     <h3>About</h3>
-    <p>I like simple and useful interfaces. I'm doing complex things simpler</p>
+    <p>I like simple and useful interfaces. I do complex things simpler</p>
     <p>I'm fond of bartending. My favorite pizza is Margarita</p>
     <h3>Contacts</h3>
     <ul>
@@ -42,7 +42,7 @@
             <a href="https://github.com/vkrbt">Github</a>
         </li>
         <li>
-            <a href="mailto:vkrbt@ya.ru">Mail</a>
+            <a href="mailto:vkrbt@ya.ru" data-mail="vkrbt@ya.ru" class="email"><span>Mail</span></a>
         </li>
     </ul>
     <h3>

@@ -92,7 +92,7 @@
 
 <style>
     .container {
-        overflow: scroll;
+        overflow-x: auto;
         padding-top: 32px;
     }
 
@@ -106,6 +106,7 @@
         right: 0;
         background: #fff;
         box-shadow: 0 2px 8px 0 rgba(99, 99, 99, 0.2);
+        z-index: 1;
     }
 
     .menu {
