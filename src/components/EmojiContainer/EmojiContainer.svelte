@@ -3,7 +3,7 @@
     import Emoji from 'components/Emoji/Emoji.svelte';
     import {generateEmoji} from 'helpers/generateEmoji';
     import {throttle} from 'helpers/throttle';
-    import {isDeviceOrientationSupported, isTouchSupported} from 'helpers/device';
+    import {isDeviceOrientationSupported, isTouchSupported, isIOS} from 'helpers/device';
 
     export let number;
 
@@ -15,7 +15,8 @@
 
     let currentXMovement = 0;
     let currentYMovement = 0;
-    let isOrientation = isTouchSupported();
+    let isOrientation = isDeviceOrientationSupported() || isTouchSupported();
+    let ios = isIOS();
 
     if (window.DeviceOrientationEvent && window.DeviceOrientationEvent.requestPermissions) {
         DeviceOrientationEvent.requestPermissions();
@@ -79,8 +80,8 @@
 
 <svelte:window
     on:resize|passive="{updateEmoji}"
-    on:mousemove|passive="{isOrientation ? null : handleMouseMove}"
-    on:deviceorientation|passive="{isOrientation ? handleDeviceOrientation : null}"
+    on:mousemove|passive="{isOrientation || ios ? null : handleMouseMove}"
+    on:deviceorientation|passive="{isOrientation || ios ? handleDeviceOrientation : null}"
 />
 
 {#if isEmojisShown}
