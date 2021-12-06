@@ -15,7 +15,7 @@
 
     let currentXMovement = 0;
     let currentYMovement = 0;
-    let isOrientation = isDeviceOrientationSupported();
+    let isOrientation = isTouchSupported();
 
     if (window.DeviceOrientationEvent && window.DeviceOrientationEvent.requestPermissions) {
         DeviceOrientationEvent.requestPermissions();
