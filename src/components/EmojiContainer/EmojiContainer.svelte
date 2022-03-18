@@ -15,8 +15,9 @@
 
     let currentXMovement = 0;
     let currentYMovement = 0;
-    let isOrientation = isDeviceOrientationSupported() || isTouchSupported();
+    let isOrientation = isDeviceOrientationSupported() && isTouchSupported();
     let ios = isIOS();
+    let initialWidth;
 
     if (window.DeviceOrientationEvent && window.DeviceOrientationEvent.requestPermissions) {
         DeviceOrientationEvent.requestPermissions();
@@ -27,6 +28,7 @@
     let timeoutId;
 
     onMount(() => {
+        initialWidth = window.innerWidth;
         timeoutId = setTimeout(() => {
             isEmojisShown = true;
         }, 200);
@@ -72,6 +74,10 @@
     }
 
     let updateEmoji = throttle(() => {
+        if (initialWidth === window.innerWidth) {
+            return;
+        }
+
         randomEmojis = generateEmoji(number, radius);
         currentXMovement = 0;
         currentYMovement = 0;
