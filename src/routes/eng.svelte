@@ -32,17 +32,20 @@
     </div>
     <h3>About</h3>
     <p>I like simple and useful interfaces. I do complex things simpler</p>
-    <p>I'm fond of bartending. My favorite pizza is Margarita</p>
+    <p>I'm fond of bartending and shooting on film. My favorite pizza is Margarita</p>
     <h3>Contacts</h3>
     <ul>
         <li>
-            <a href="https://t.me/vkrbt">Telegram</a>
+            <a target='_blank' href="https://t.me/vkrbt">Telegram</a>
         </li>
         <li>
-            <a href="https://github.com/vkrbt">Github</a>
+            <a target='_blank' href="https://github.com/vkrbt">Github</a>
         </li>
         <li>
-            <a href="mailto:vkrbt@ya.ru" data-mail="vkrbt@ya.ru" class="email"><span>Mail</span></a>
+            <a target='_blank' href="mailto:vkrbt@ya.ru" data-print-label="vkrbt@ya.ru" class="email"><span>Mail</span></a>
+        </li>
+        <li>
+            <a target='_blank' href="https://www.instagram.com/vkrbt.film/"  data-print-label="instagram.com/vkrbt.film" class="email"><span>My film photos on Instagram</span></a>
         </li>
     </ul>
     <h3>
@@ -55,14 +58,21 @@
             <ul>
                 <li>
                     <a href="https://yandex.ru/q">Yandex.Q (October 2019 — now)</a>
+                    <h4>Main achievements</h4>
+                    <ul>
+                        <li>Developed service for generation OpenGraph images. Improved speed and complexity of development.</li>
+                        <li>Created service for testing developed features. Improved stability of testing UI features.</li>
+                    </ul>
                     <h4>Responsibilities</h4>
                     <ul>
                         <li>UI development</li>
+                        <li>Tech infrastructure improvement</li>
                         <li>Beta testing application development</li>
                         <li>UI redesign of main parts of the application</li>
                         <li>Close cooperation with a design team</li>
                         <li>Video infrastructure integration</li>
-                        <li>Infrastructure improvement</li>
+                        <li>Teammates mentoring</li>
+                        <li>Tech task management</li>
                         <li>Everyday routine automatization</li>
                     </ul>
                 </li>
@@ -105,7 +115,7 @@
     </ul>
     <h3>Education</h3>
     <ul>
-        <li>Master degree. BSU Mechanics and Mathematics Faculty 2019-2021</li>
+        <li>Unfinished Master degree. BSU Mechanics and Mathematics Faculty 2019</li>
         <li>Bachelor degree. BSU Mechanics and Mathematics Faculty 2015-2019</li>
     </ul>
     <h3>Additional education</h3>

@@ -42,7 +42,7 @@
             <a href="https://github.com/vkrbt">Github</a>
         </li>
         <li>
-            <a href="mailto:vkrbt@ya.ru" data-mail="vkrbt@ya.ru" class="email"><span>Почта</span></a>
+            <a href="mailto:vkrbt@ya.ru" data-print-label="vkrbt@ya.ru" class="email"><span>Почта</span></a>
         </li>
     </ul>
     <h3>
