@@ -410,11 +410,11 @@ hr {
 }
 
 @media print {
-  .email:before {
-    content: attr(data-mail);
+  [data-print-label]:before {
+    content: attr(data-print-label);
   }
 
-  .email span {
+  [data-print-label] span {
     display: none;
   }
 }
