@@ -32,7 +32,7 @@
     </div>
     <h3>About</h3>
     <p>I like simple and useful interfaces. I do complex things simpler</p>
-    <p>I'm fond of bartending and shooting on film. My favorite pizza is Margarita</p>
+    <p>I'm fond of bartending and shooting on film. My favorite pizza is Margherita</p>
     <h3>Contacts</h3>
     <ul>
         <li>
