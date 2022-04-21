@@ -31,7 +31,7 @@
         </div>
     </div>
     <h3>About</h3>
-    <p>I like simple and useful interfaces. I do complex things simpler</p>
+    <p>I like simple and useful interfaces. I do complex things simply</p>
     <p>I'm fond of bartending and shooting on film. My favorite pizza is Margherita</p>
     <h3>Contacts</h3>
     <ul>
@@ -60,7 +60,7 @@
                     <a href="https://yandex.ru/q">Yandex.Q (October 2019 — now)</a>
                     <h4>Main achievements</h4>
                     <ul>
-                        <li>Developed service for generation OpenGraph images. Improved speed and complexity of development.</li>
+                        <li>Developed service for generating OpenGraph images. Improved speed and complexity of development.</li>
                         <li>Created service for testing developed features. Improved stability of testing UI features.</li>
                     </ul>
                     <h4>Responsibilities</h4>
@@ -72,7 +72,7 @@
                         <li>Close cooperation with a design team</li>
                         <li>Video infrastructure integration</li>
                         <li>Teammates mentoring</li>
-                        <li>Tech task management</li>
+                        <li>Management of technical tasks</li>
                         <li>Everyday routine automatization</li>
                     </ul>
                 </li>
@@ -87,7 +87,7 @@
                         <li>Performance improvement</li>
                     </ul>
                 </li>
-                <li>Teaching in the FDS(Frontend Development School). Students mentoring</li>
+                <li>Teaching in the FDS(Frontend Development School). Students' mentoring</li>
             </ul>
         </li>
         <li>
@@ -98,7 +98,7 @@
                     <h4>Responsibilities</h4>
                     <ul>
                         <li>Architecture design</li>
-                        <li>Multirole browsing developing</li>
+                        <li>Multirole browsing development</li>
                         <li>Development of admin panel</li>
                     </ul>
                 </li>
