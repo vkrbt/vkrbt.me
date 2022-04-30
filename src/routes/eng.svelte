@@ -36,10 +36,10 @@
     <h3>Contacts</h3>
     <ul>
         <li>
-            <a target='_blank' href="https://t.me/vkrbt">Telegram</a>
+            <a target='_blank' href="https://t.me/vkrbt" data-print-label="t.me/vkrbt"><span>Telegram</span></a>
         </li>
         <li>
-            <a target='_blank' href="https://github.com/vkrbt">Github</a>
+            <a target='_blank' href="https://github.com/vkrbt" data-print-label="github.com/vkrbt"><span>Github</span></a>
         </li>
         <li>
             <a target='_blank' href="mailto:vkrbt@ya.ru" data-print-label="vkrbt@ya.ru" class="email"><span>Mail</span></a>
