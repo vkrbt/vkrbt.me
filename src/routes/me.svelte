@@ -5,7 +5,7 @@
     import {getPluralForm} from 'helpers/getPluralForm';
     import {decimalRound} from 'helpers/decimalRound';
 
-    let startExperience = Date.UTC(2017, 8, 29);
+    let startExperience = Date.UTC(2017, 7, 29);
     let today = Date.now();
     let experience = (today - startExperience) / SECONDS_IN_YEAR;
 
@@ -32,7 +32,7 @@
     </div>
     <h3>О Себе</h3>
     <p>Люблю простые и удобные интерфейсы. Делаю сложные вещи проще.</p>
-    <p>Увлекаюсь барной культурой, катаюсь на лонгборде. Люблю пиццу маргарита</p>
+    <p>Крашу ногти, снимаю на пленку. Люблю пиццу маргарита</p>
     <h3>Контакты</h3>
     <ul>
         <li>

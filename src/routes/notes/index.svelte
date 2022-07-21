@@ -1,17 +1,3 @@
-<script context="module">
-    import {get} from 'helpers/request';
-
-    export async function preload() {
-        try {
-            const posts = await get('/api/posts?filter[order]=created%20DESC');
-
-            return {posts};
-        } catch (error) {
-            console.log(error);
-        }
-    }
-</script>
-
 <script>
     import NoteCard from 'components/NoteCard/NoteCard.svelte';
     import photo from 'images/vkrbt@2x.jpg';
@@ -42,6 +28,8 @@
                 </li>
             {/each}
         </ul>
+    {:else}
+        <p>Пока здесь нет ничего</p>
     {/if}
 </section>
 
