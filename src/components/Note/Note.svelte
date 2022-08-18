@@ -29,7 +29,11 @@
             hyphens: auto;
         }
 
-        :global(p, ul) {
+        :global(ul) {
+            padding-bottom: 16px;
+        }
+
+        :global(p) {
             padding-bottom: 16px;
         }
 

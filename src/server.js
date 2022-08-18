@@ -54,14 +54,17 @@ polka() // You can also use Express
                     defaultSrc: ["'self'"],
                     styleSrc: ["'self'", "'unsafe-inline'", 'https://fonts.googleapis.com'],
                     fontSrc: ["'self'", 'https://fonts.gstatic.com'],
+                    frameSrc: ['https://www.instagram.com'],
                     connectSrc: [
                         "'self'",
+                        'http://www.instagram.com',
                         'https://fonts.googleapis.com',
                         'https://fonts.gstatic.com',
                         ...(dev ? ['http://localhost:10000', 'https://vkrbt.me'] : []),
                     ],
                     scriptSrc: [
                         "'self'",
+                        'http://www.instagram.com',
                         ...(dev ? ["'unsafe-eval'"] : []),
                         (req, res) => `'nonce-${res.locals.nonce}'`,
                     ],
