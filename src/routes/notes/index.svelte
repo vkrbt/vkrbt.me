@@ -16,21 +16,15 @@
 
 <section class="notes">
     <h1>Мои заметки</h1>
-    {#if posts}
-        <ul class="notes-list">
-            {#each posts as post}
-                <li class="note-item">
-                    <NoteCard
-                        id="{post.id}"
-                        title="{post.title}"
-                        description="{post.description}"
-                    />
-                </li>
-            {/each}
-        </ul>
-    {:else}
-        <p>Пока здесь нет ничего</p>
-    {/if}
+    <ul class="notes-list">
+        <li class="note-item">
+            <NoteCard
+                id="how-i-started-to-live"
+                title="Как я начал жить свою жизнь"
+                description="О моем кризисе в карьере"
+            />
+        </li>
+    </ul>
 </section>
 
 <style>
