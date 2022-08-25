@@ -21,13 +21,20 @@
                 title="Как я начал жить свою жизнь"
                 description="О моем кризисе в карьере"
             />
-            <div class='hidden'>
-                <NoteCard
-                    id="lost-and-found"
-                    title="Как я начал жить свою жизнь"
-                    description="О моем кризисе в карьере"
-                />
-            </div>
+        </li>
+        <li class="note-item">
+            <NoteCard
+                id="lost-and-found"
+                title="Я потерял все, что привез с Бали"
+                description="О том, как приходит новый опыт в жизнь"
+            />
+        </li>
+        <li class="note-item hidden">
+            <NoteCard
+                id="frightened-laughter"
+                title="В чем сила, брат?"
+                description="Защитный механизм в страхе"
+            />
         </li>
     </ul>
 </section>
