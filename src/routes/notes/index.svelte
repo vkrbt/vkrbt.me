@@ -21,6 +21,13 @@
                 title="Как я начал жить свою жизнь"
                 description="О моем кризисе в карьере"
             />
+            <div class='hidden'>
+                <NoteCard
+                    id="lost-and-found"
+                    title="Как я начал жить свою жизнь"
+                    description="О моем кризисе в карьере"
+                />
+            </div>
         </li>
     </ul>
 </section>
@@ -42,5 +49,9 @@
 
     .note-item {
         padding: 8px 0;
+    }
+
+    .hidden {
+        display: none;
     }
 </style>
