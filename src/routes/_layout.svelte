@@ -1,17 +1,17 @@
 <script>
     import EmojiContainer from 'components/EmojiContainer/EmojiContainer.svelte';
-    // import Menu from 'components/Menu/Menu.svelte';
+    import Menu from 'components/Menu/Menu.svelte';
     import {stores} from '@sapper/app';
 
     let {page} = stores();
-    // let path = $page.path;
-    // const ROUTES_WITHOUT_MENU = ['verbs', 'me', 'cv', 'eng'].map((route) => `/${route}/`);
+    let path = $page.path;
+    const ROUTES_WITHOUT_MENU = ['verbs', 'me', 'cv', 'eng'].map((route) => `/${route}/`);
 </script>
 
 <div class="container">
-    <!--{#if !ROUTES_WITHOUT_MENU.includes($page.path)}-->
-    <!--    <Menu />-->
-    <!--{/if}-->
+    {#if !ROUTES_WITHOUT_MENU.includes($page.path)}
+        <Menu />
+    {/if}
     <slot />
 
     {#if process.browser && $page.path === '/'}
@@ -19,7 +19,7 @@
     {/if}
 </div>
 
-<style type="text/postcss">
+<style>
     .container {
         padding: 16px;
         padding-bottom: calc(80px + env(safe-area-inset-bottom));
