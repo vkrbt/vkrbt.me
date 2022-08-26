@@ -41,7 +41,7 @@
     "postcss-url": "9.0.0",
     "prettier": "2.2.1",
     "prettier-plugin-svelte": "0.7.0",
-    "sapper": "0.27.16",
+    "sapper": "0.29.3",
     "svelte": "3.49.0",
     "svelte-loader": "2.13.6",
     "svelte-preprocess": "3.9.12",
