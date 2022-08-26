@@ -21,7 +21,7 @@
     "express": "4.17.1",
     "helmet": "3.23.3",
     "http-proxy-middleware": "0.21.0",
-    "isomorphic-fetch": "2.2.1",
+    "isomorphic-fetch": "3.0.0",
     "needle": "2.6.0",
     "polka": "1.0.0-next.11",
     "sirv": "0.4.6",
