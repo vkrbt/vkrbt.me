@@ -101,7 +101,7 @@
         position: relative;
 
         :global(path) {
-            stroke-dasharray: 70;
+            stroke-dasharray: 82;
             stroke-dashoffset: 0;
         }
 
@@ -113,7 +113,7 @@
 
         @keyframes dash {
             from {
-                stroke-dashoffset: 70;
+                stroke-dashoffset: 82;
             }
             to {
                 stroke-dashoffset: 0;
