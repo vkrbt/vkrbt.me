@@ -26,13 +26,13 @@
             <NoteCard
                 id="lost-and-found"
                 title="Я потерял все, что привез с Бали"
-                description="О том, как приходит новый опыт в жизнь"
+                description="О том, как приходит новый опыт"
             />
         </li>
-        <li class="note-item hidden">
+        <li class="note-item">
             <NoteCard
                 id="frightened-laughter"
-                title="В чем сила, брат?"
+                title="Cтрашно быть слабым"
                 description="Защитный механизм в страхе"
             />
         </li>
