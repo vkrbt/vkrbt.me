@@ -17,13 +17,23 @@
     <ul class="notes-list">
         <li class="note-item">
             <NoteCard
-                id="how-i-started-to-live"
-                title="Как я начал жить свою жизнь"
-                description="О моем кризисе в карьере"
+                date="2022.10.05"
+                id="texts-to-exes"
+                title="Общаться ли с бывшими?"
+                description="Делюсь своим опытом"
             />
         </li>
         <li class="note-item">
             <NoteCard
+                date="2022.08.31"
+                id="frightened-laughter"
+                title="Cтрашно быть слабым"
+                description="Защитный механизм в страхе"
+            />
+        </li>
+        <li class="note-item">
+            <NoteCard
+                date="2022.08.26"
                 id="lost-and-found"
                 title="Я потерял все, что привез с Бали"
                 description="О том, как приходит новый опыт"
@@ -31,9 +41,10 @@
         </li>
         <li class="note-item">
             <NoteCard
-                id="frightened-laughter"
-                title="Cтрашно быть слабым"
-                description="Защитный механизм в страхе"
+                date="2022.08.18"
+                id="how-i-started-to-live"
+                title="Как я начал жить свою жизнь"
+                description="О моем кризисе в карьере"
             />
         </li>
     </ul>
