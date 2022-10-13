@@ -44,6 +44,7 @@
                         href="{link.href}"
                     >
                         {@html link.icon}
+                        {@html link.icon}
                         {link.label}
                     </a>
                 </li>
@@ -74,16 +75,6 @@
         }
     }
 
-    @media screen and (max-width: 576px) {
-        .menu {
-            min-width: auto;
-            top: auto;
-            bottom: 8px;
-            left: 8px;
-            right: 8px;
-        }
-    }
-
     .menu-item {
         flex-basis: 33.333%;
         flex-grow: 1;
@@ -105,9 +96,25 @@
             stroke-dashoffset: 0;
         }
 
+        :global(svg:first-child) {
+            position: absolute;
+            opacity: 0.3;
+            top: 0;
+            left: 50%;
+            transform: translate(-50%);
+        }
+
+        :global(svg:last-child) {
+            opacity: 0;
+        }
+
         &:hover {
-            :global(path) {
+            :global(svg:last-child path) {
                 animation: dash 0.5s linear forwards;
+            }
+
+            :global(svg:last-child) {
+                opacity: 1;
             }
         }
 
@@ -169,6 +176,16 @@
                     background: #cd5adf;
                 }
             }
+        }
+    }
+
+    @media screen and (max-width: 576px) {
+        .menu {
+            min-width: auto;
+            top: auto;
+            bottom: 8px;
+            left: 8px;
+            right: 8px;
         }
     }
 </style>
