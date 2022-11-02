@@ -1,15 +1,16 @@
 <script>
     import src from 'images/vkrbt.jpg';
     import src2x from 'images/vkrbt@2x.jpg';
-    import {SECONDS_IN_YEAR} from 'constants/default';
+    import {SECONDS_IN_YEAR, SECONDS_IN_MONTH} from 'constants/default';
     import {getPluralForm} from 'helpers/getPluralForm';
     import {decimalRound} from 'helpers/decimalRound';
 
     let startExperience = Date.UTC(2017, 8, 29);
     let today = Date.now();
-    let experience = (today - startExperience) / SECONDS_IN_YEAR;
-
-    let experienceSting = getPluralForm(decimalRound(experience, 1), ['year', 'years', 'years']);
+    let experienceYears = decimalRound((today - startExperience) / SECONDS_IN_YEAR);
+    let experienceMonths = decimalRound((today - startExperience) / SECONDS_IN_MONTH) % 12;
+    experienceYears = getPluralForm(experienceYears, ['year', 'years', 'years']);
+    let experienceMonth = getPluralForm(decimalRound(experienceMonths, 1), ['month', 'months', 'months']);
 </script>
 
 <svelte:head>
@@ -50,7 +51,7 @@
     </ul>
     <h3>
         Experience
-        <span class="experience">{experienceSting}</span>
+        <span class="experience">{experienceYears} {experienceMonth}</span>
     </h3>
     <ul>
         <li>
