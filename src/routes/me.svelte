@@ -166,7 +166,7 @@
     }
 
     ul {
-        padding-left: 28px;
+        padding-left: 20px;
     }
 
     @media screen and (max-width: 576px) {

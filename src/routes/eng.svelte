@@ -31,18 +31,18 @@
         </div>
     </div>
     <h3>About</h3>
-    <p>I like simple and useful interfaces. I do complex things simply</p>
-    <p>I'm fond of bartending and shooting on film. My favorite pizza is Margherita</p>
+    <p>I like simple and convenient interfaces. I do complex things simply</p>
+    <p>I paint my nails, shoot on film. My favorite pizza is Margherita</p>
     <h3>Contacts</h3>
     <ul>
+        <li>
+            <a target='_blank' href="mailto:vkrbt@ya.ru" data-print-label="vkrbt@ya.ru" class="email"><span>Mail</span></a>
+        </li>
         <li>
             <a target='_blank' href="https://t.me/vkrbt" data-print-label="t.me/vkrbt"><span>Telegram</span></a>
         </li>
         <li>
             <a target='_blank' href="https://github.com/vkrbt" data-print-label="github.com/vkrbt"><span>Github</span></a>
-        </li>
-        <li>
-            <a target='_blank' href="mailto:vkrbt@ya.ru" data-print-label="vkrbt@ya.ru" class="email"><span>Mail</span></a>
         </li>
         <li>
             <a target='_blank' href="https://www.instagram.com/vkrbt.film/"  data-print-label="instagram.com/vkrbt.film" class="email"><span>My film photos on Instagram</span></a>
@@ -60,6 +60,7 @@
                     <a href="https://yandex.ru/q">Yandex.Q (October 2019 — now)</a>
                     <h4>Main achievements</h4>
                     <ul>
+                        <li>Set up CI and deployment flow. Made deployment process simpler.</li>
                         <li>Developed service for generating OpenGraph images. Improved speed and complexity of development.</li>
                         <li>Created service for testing developed features. Improved stability of testing UI features.</li>
                     </ul>
@@ -67,13 +68,14 @@
                     <ul>
                         <li>UI development</li>
                         <li>Tech infrastructure improvement</li>
+                        <li>CI maintaining</li>
                         <li>Beta testing application development</li>
                         <li>UI redesign of main parts of the application</li>
-                        <li>Close cooperation with a design team</li>
                         <li>Video infrastructure integration</li>
-                        <li>Teammates mentoring</li>
                         <li>Management of technical tasks</li>
+                        <li>Teammates mentoring</li>
                         <li>Everyday routine automatization</li>
+                        <li>Close cooperation with a design team</li>
                     </ul>
                 </li>
                 <li>
@@ -177,7 +179,7 @@
     }
 
     ul {
-        padding-left: 28px;
+        padding-left: 20px;
     }
 
     @media screen and (max-width: 576px) {
