@@ -1,6 +1,6 @@
 <script>
     import Main from 'components/Main/Main.svelte';
-    import photo from 'images/vkrbt@2x.jpg';
+    import photo from 'images/vkrbt-new@2x.jpg';
 </script>
 
 <svelte:head>

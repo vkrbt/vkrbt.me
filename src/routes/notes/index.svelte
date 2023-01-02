@@ -1,6 +1,6 @@
 <script>
     import NoteCard from 'components/NoteCard/NoteCard.svelte';
-    import photo from 'images/vkrbt@2x.jpg';
+    import photo from 'images/vkrbt-new@2x.jpg';
 </script>
 
 <svelte:head>
@@ -15,6 +15,14 @@
 <section class="notes">
     <h1>Мои заметки</h1>
     <ul class="notes-list">
+        <li class="note-item">
+            <NoteCard
+                date="2023.01.02"
+                id="new-year-loneliness"
+                title="Новогоднее одиночество"
+                description="И как я с ним обошелся"
+            />
+        </li>
         <li class="note-item">
             <NoteCard
                 date="2022.10.05"

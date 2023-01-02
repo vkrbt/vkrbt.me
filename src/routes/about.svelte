@@ -1,5 +1,5 @@
 <script>
-    import src2x from 'images/vkrbt@2x.jpg';
+    import src2x from 'images/vkrbt-new@2x.jpg';
     import {getPluralForm} from 'helpers/getPluralForm';
     import {getMyAge} from 'helpers/getMyAge';
 
