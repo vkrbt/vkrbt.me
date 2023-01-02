@@ -1,6 +1,6 @@
 <script>
-    import src from 'images/vkrbt.jpg';
-    import src2x from 'images/vkrbt@2x.jpg';
+    import src from 'images/vkrbt-new.jpg';
+    import src2x from 'images/vkrbt-new@2x.jpg';
     import {SECONDS_IN_YEAR} from 'constants/default';
     import {getPluralForm} from 'helpers/getPluralForm';
     import {decimalRound} from 'helpers/decimalRound';
