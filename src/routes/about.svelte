@@ -30,6 +30,10 @@
         <a href="https://t.me/vkrbt">здесь телеграм</a>.
     </p>
 
+    <p>
+        На случай, если у меня какой-то праздник, а вы не знаете, что мне подарить — <a href="https://vkrbt.notion.site/8bd00fc075094f2485319d60866cdb3d" rel='noreferrer noopener'>мой вишлист</a>
+    </p>
+
     <a class="hidden" href="/me/">cv</a>
     <a class="hidden" href="/cv/">cv detailed</a>
     <a class="hidden" href="/eng/">cv eng</a>
