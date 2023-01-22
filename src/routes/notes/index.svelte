@@ -17,6 +17,14 @@
     <ul class="notes-list">
         <li class="note-item">
             <NoteCard
+                date="2023.01.22"
+                id="insta-workout"
+                title="Тренировки и инстаграм"
+                description="Что мне помогает не слиться"
+            />
+        </li>
+        <li class="note-item">
+            <NoteCard
                 date="2023.01.02"
                 id="new-year-loneliness"
                 title="Новогоднее одиночество"

@@ -14,13 +14,17 @@
             padding-left: 0;
         }
 
-        :global(li) {
+        :global(ul li) {
             list-style-type: none;
             &::before {
                 content: '•';
                 margin: 0 12px 0 0;
                 color: #ccc;
             }
+        }
+
+        :global(ol) {
+            margin: 0;
         }
 
         :global(.note) {
