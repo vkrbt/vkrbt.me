@@ -18,6 +18,14 @@
         <li class="note-item">
             <NoteCard
                 date="2023.01.22"
+                id="my-male-research"
+                title="Про уход папы"
+                description="И как на это отразилось на мне"
+            />
+        </li>
+        <li class="note-item">
+            <NoteCard
+                date="2023.01.22"
                 id="insta-workout"
                 title="Тренировки и инстаграм"
                 description="Что мне помогает не слиться"
