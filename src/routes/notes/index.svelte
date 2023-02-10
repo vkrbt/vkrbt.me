@@ -17,10 +17,18 @@
     <ul class="notes-list">
         <li class="note-item">
             <NoteCard
-                date="2023.01.22"
+                date="2023.02.10"
                 id="my-male-research"
                 title="Про уход папы"
                 description="И как на это отразилось на мне"
+            />
+        </li>
+        <li class="note-item">
+            <NoteCard
+                date="2023.01.27"
+                id="memes-channel"
+                title="История создания канала с мемами"
+                description="И как он стал шагом к публичной деятельности"
             />
         </li>
         <li class="note-item">
