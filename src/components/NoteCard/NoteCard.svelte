@@ -11,7 +11,6 @@
     <div>
         <span class="date date-mobile">{formatDate(date)}</span>
         <h2>{title} <span class="date date-dt">— {formatDate(date)}</span></h2>
-        <p>{description}</p>
     </div>
 </a>
 
