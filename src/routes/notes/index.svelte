@@ -17,10 +17,16 @@
     <ul class="notes-list">
         <li class="note-item">
             <NoteCard
+                date="2023.03.13"
+                id="my-male-research"
+                title="Путешествия одному"
+            />
+        </li>
+        <li class="note-item">
+            <NoteCard
                 date="2023.02.10"
                 id="my-male-research"
                 title="Про уход папы"
-                description="И как на это отразилось на мне"
             />
         </li>
         <li class="note-item">
@@ -28,7 +34,6 @@
                 date="2023.01.27"
                 id="memes-channel"
                 title="История создания канала с мемами"
-                description="И как он стал шагом к публичной деятельности"
             />
         </li>
         <li class="note-item">
@@ -36,7 +41,6 @@
                 date="2023.01.22"
                 id="insta-workout"
                 title="Тренировки и инстаграм"
-                description="Что мне помогает не слиться"
             />
         </li>
         <li class="note-item">
@@ -44,7 +48,6 @@
                 date="2023.01.02"
                 id="new-year-loneliness"
                 title="Новогоднее одиночество"
-                description="И как я с ним обошелся"
             />
         </li>
         <li class="note-item">
@@ -52,7 +55,6 @@
                 date="2022.10.05"
                 id="texts-to-exes"
                 title="Общаться ли с бывшими?"
-                description="Делюсь своим опытом"
             />
         </li>
         <li class="note-item">
@@ -60,7 +62,6 @@
                 date="2022.08.31"
                 id="frightened-laughter"
                 title="Cтрашно быть слабым"
-                description="Защитный механизм в страхе"
             />
         </li>
         <li class="note-item">
@@ -68,7 +69,6 @@
                 date="2022.08.26"
                 id="lost-and-found"
                 title="Я потерял все, что привез с Бали"
-                description="О том, как приходит новый опыт"
             />
         </li>
         <li class="note-item">
@@ -76,7 +76,6 @@
                 date="2022.08.18"
                 id="how-i-started-to-live"
                 title="Как я начал жить свою жизнь"
-                description="О моем кризисе в карьере"
             />
         </li>
     </ul>
