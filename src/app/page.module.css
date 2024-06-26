@@ -1,0 +1,68 @@
+.head {
+  display: flex;
+  align-items: center;
+}
+
+.contact {
+}
+
+.contactPrint {
+  display: none;
+}
+
+@media print {
+  .contact {
+    display: none;
+  }
+
+  .contactPrint {
+    display: inline
+  }
+}
+
+.experience {
+  margin-left: 4px;
+  opacity: 0.5;
+}
+
+@media screen and (max-width: 576px) {
+  .head {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+.picture {
+  float: left;
+  margin: 0 16px 16px 0;
+}
+
+.notes {
+  padding: 16px;
+  max-width: 600px;
+  margin: auto;
+}
+
+.notes h4 {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.notes p + .notes p {
+  margin-top: 4px;
+}
+
+.notes li + .notes li {
+  margin-top: 4px;
+}
+
+.notes ul {
+  padding-left: 20px;
+  margin: 4px 0;
+}
+
+@media screen and (max-width: 576px) {
+  .notes ul {
+    padding-left: 16px;
+  }
+}
