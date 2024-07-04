@@ -108,9 +108,18 @@
   margin: 4px 0;
 }
 
+.jobtitle {
+  font-style: italic;
+}
+
 .experienceInfo {
   opacity: 0.6;
   list-style-type: "- ";
+}
+
+.experienceMore {
+  display: block;
+  margin-left: 8px;
 }
 
 @media screen and (max-width: 576px) {
@@ -120,7 +129,8 @@
 }
 
 .technologies {
+  margin-top: 8px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 0 8px;
 }

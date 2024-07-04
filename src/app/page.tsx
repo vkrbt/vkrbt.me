@@ -49,58 +49,83 @@ export default function Home() {
             <h3>About</h3>
             <p>Passionate web developer with a focus on result achieving results, optimizing processes, improving
                 communication, and creating user-friendly experiences.</p>
-            <p>Seeking a challenging web development role with the opportunity of leadership development.</p>
-
+            <p>Seeking a challenging frontend development role in a startup or product company, with opportunities for
+                leadership development.</p>
             <h3 className={styles.headline}>
                 <a href='https://bookmate.ru/'>Bookmate</a>
                 <span className={styles.dates}>2022 — now</span>
             </h3>
             <p className={styles.jobtitle}>Senior Frontend Developer</p>
+            <p>A subscription-based content service offering a wide range of books.</p>
             <ul className={styles.experienceInfo}>
-                <li>Made redesign and implemented design system</li>
-                <li>Improved build and release speed</li>
-                <li>Enhanced analytics tracking</li>
-                <li>Set up CI release flow for external team</li>
-                <li>Set up tools for easy task testing</li>
+                <li>
+                    Redesigned the entire project
+                    <span className={styles.experienceMore}>Organized collaboration with the design team for the complete redesign of the website and successfully implemented it within a short timeframe.</span>
+                </li>
+                <li>
+                    Accelerated and optimized CI/CD and deployment processes
+                    <span className={styles.experienceMore}>Set up CI/CD and managed the optimization of release speeds. Migrated to pnpm, resulting in more than a 2x increase in build speed.</span>
+                </li>
+                <li>
+                    Managed technical projects
+                    <span className={styles.experienceMore}>Organized and set up CI for the outstaff team, and provided consultation and support for the development of marketing landing pages for the company.</span>
+                </li>
+                <li>
+                    Set up infrastructure for testing
+                    <span className={styles.experienceMore}>Developed a NodeJS application for deploying beta environments for each pull request. Deployed and configured load balancing and proxying.</span>
+                </li>
+                <li>Resolved tasks under high uncertainty within tight deadlines</li>
+                <li>Consulted colleagues on Git, CI/CD, and deployment processes</li>
+                <li>Integrated audio listening feature into the service</li>
+                <li>Refactored legacy project to modern tech stack</li>
+                <li>Worked in a distributed team</li>
             </ul>
-            <h4>Responsibilities</h4>
-            <ul className={styles.experienceInfo}>
-                <li>Audio player integration</li>
-                <li>Technical tasks management</li>
-                <li>Teammates mentoring</li>
-                <li>Everyday routine automatization</li>
-                <li>Close cooperation with a design team</li>
-                <li>UI development</li>
-                <li>Tech infrastructure improvement</li>
-                <li>CI maintaining</li>
-                <li>Beta testing application development</li>
-                <li>UI redesign of main parts of the application</li>
-            </ul>
-            <h3 className={styles.headline}><a href='https://yandex.ru/q'>Yandex.Q</a><span className={styles.dates}>2019 — 2022</span>
+            <div className={clsJoin(styles.technologies, styles.experienceInfo)}>
+                <span>Typescript</span>
+                <span>React</span>
+                <span>NextJS</span>
+                <span>NodeJS</span>
+                <span>Apollo</span>
+                <span>GraphQL</span>
+                <span>Mobx</span>
+                <span>Redux</span>
+                <span>CI/CD</span>
+                <span>PNPM</span>
+                <span>Deploy</span>
+            </div>
+            <h3 className={styles.headline}>
+                <a href='https://yandex.ru/q'>Yandex.Q</a>
+                <span className={styles.dates}>2019 — 2022</span>
             </h3>
             <p className={styles.jobtitle}>Senior Frontend Developer</p>
+            <p>A user-generated content (UGC) question-and-answer service similar to Quora.</p>
             <ul className={styles.experienceInfo}>
-                <li>Set up CI and deployment flow. Made deployment process simpler.</li>
-                <li>Developed service for generating OpenGraph images. Improved speed and complexity of
-                    development.
+                <li>Set up CI and deployment flow, simplifying the deployment process.</li>
+                <li>Developed a service for generating OpenGraph images, improving development speed and complexity.
                 </li>
-                <li>Created service for testing developed features. Improved stability of testing UI
-                    features.
-                </li>
+                <li>Created a service for testing developed features, enhancing the stability of UI testing.</li>
+                <li>Redesigned the main parts of the application UI</li>
+                <li>Integrated video infrastructure</li>
+                <li>Mentored teammates</li>
+                <li>Managed technical tasks</li>
+                <li>Automated everyday routines</li>
+                <li>Worked closely with the design team</li>
+                <li>Developed UI components</li>
+                <li>Improved technical infrastructure</li>
+                <li>Maintained CI processes</li>
+                <li>Developed a beta testing application</li>
             </ul>
-            <h4>Responsibilities</h4>
-            <ul className={styles.experienceInfo}>
-                <li>UI redesign of main parts of the application</li>
-                <li>Video infrastructure integration</li>
-                <li>Teammates mentoring</li>
-                <li>Management of technical tasks</li>
-                <li>Everyday routine automatization</li>
-                <li>Close cooperation with a design team</li>
-                <li>UI development</li>
-                <li>Tech infrastructure improvement</li>
-                <li>CI maintaining</li>
-                <li>Beta testing application development</li>
-            </ul>
+
+            <div className={clsJoin(styles.technologies, styles.experienceInfo)}>
+                <span>Typescript</span>
+                <span>React</span>
+                <span>Mobx</span>
+                <span>NodeJS</span>
+                <span>Apollo</span>
+                <span>Mobx</span>
+                <span>CI/CD</span>
+                <span>Deploy</span>
+            </div>
             <h3 className={styles.headline}>
                 <a href='https://yandex.ru/collections'>
                     Yandex.Collections
@@ -108,6 +133,7 @@ export default function Home() {
                 <span className={styles.dates}>2018 — 2019</span>
             </h3>
             <p className={styles.jobtitle}>Frontend Developer</p>
+            <p>A UGC image service similar to Pinterest.</p>
             <h4>Responsibilities</h4>
             <ul className={styles.experienceInfo}>
                 <li>UI development</li>
