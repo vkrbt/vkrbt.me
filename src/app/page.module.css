@@ -55,6 +55,10 @@
   .contactPrint {
     display: inline
   }
+
+  .picture {
+    display: none;
+  }
 }
 
 .headline {

@@ -38,13 +38,6 @@ export default function Home() {
                             <span className={styles.contact}>Github</span>
                             <span className={styles.contactPrint}>github.com/vkrbt</span>
                         </a>
-                        <a
-                            target='_blank'
-                            href='https://www.instagram.com/vkrbt/'
-                        >
-                            <span className={styles.contact}>Insta</span>
-                            <span className={styles.contactPrint}>instagram.com/vkrbt</span>
-                        </a>
                     </div>
                 </div>
                 <Image src='/photo.jpeg' width='160' height='160' className={styles.picture} alt='my portrait' />
