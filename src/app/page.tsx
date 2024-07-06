@@ -150,31 +150,28 @@ export default function Home() {
                 </span>
             </h3>
             <p className={styles.jobtitle}>Frontend Developer</p>
-            <h4>
+            <p>
                 Artworks collection application
-            </h4>
+            </p>
             <h4>Responsibilities</h4>
             <ul className={styles.experienceInfo}>
+                <li>Communication with customer</li>
                 <li>Architecture design</li>
                 <li>Multirole browsing development</li>
                 <li>Development of admin panel</li>
             </ul>
-            <h4>
+            <p>
                 Biological Additives shop
-            </h4>
+            </p>
             <h4>Responsibilities</h4>
             <ul className={styles.experienceInfo}>
                 <li>UI redesign</li>
+                <li>Communication with customer</li>
                 <li>Payment form development. Stripe integration</li>
             </ul>
             <h3 className={styles.headline}>Education</h3>
             <ul className={styles.experienceInfo}>
                 <li>Bachelor degree. BSU Mechanics and Mathematics Faculty 2015-2019</li>
-            </ul>
-            <h3 className={styles.headline}>Additional education</h3>
-            <ul className={styles.experienceInfo}>
-                <li>Yandex FDS(Frontend Development School) 2018</li>
-                <li>ITechArt internship program 2017</li>
             </ul>
             <h3 className={styles.headline}>Technologies</h3>
             <div className={clsJoin(styles.technologies, styles.experienceInfo)}>
@@ -183,13 +180,17 @@ export default function Home() {
                 <span>NextJS</span>
                 <span>NodeJS</span>
                 <span>Apollo</span>
+                <span>GraphQL</span>
                 <span>Mobx</span>
                 <span>Redux</span>
-                <span>CI</span>
+                <span>CI/CD</span>
+                <span>Git</span>
+                <span>PM2</span>
                 <span>Webstorm</span>
                 <span>ZSH</span>
                 <span>Prettier</span>
                 <span>Figma</span>
+                <span>Linux</span>
             </div>
         </div>
     );
